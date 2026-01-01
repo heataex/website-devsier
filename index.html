@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devsier - Dịch Vụ Mạng Xã Hội Đa Nền Tảng | Facebook, TikTok, YouTube, Instagram</title>
+    <meta name="description" content="Công ty Devsier cung cấp dịch vụ mạng xã hội chuyên nghiệp: tăng tương tác, phát triển kênh, khôi phục tài khoản Facebook, TikTok, YouTube, Instagram. CEO Nguyễn Đình Huy trực tiếp giám sát.">
+    <meta name="keywords" content="dịch vụ mạng xã hội, công ty dịch vụ MXH, Devsier, hỗ trợ Facebook, TikTok, YouTube, Instagram, tăng tương tác, phát triển kênh, khôi phục tài khoản">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ===== CSS RESET & VARIABLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --neon-blue: #00f3ff;
+            --neon-purple: #9d4edd;
+            --neon-pink: #ff2a6d;
+            --neon-orange: #ff8e00;
+            --neon-green: #00ff9d;
+            --dark-bg: #0a0a14;
+            --dark-bg-2: #0f0f1a;
+            --dark-card: rgba(18, 18, 31, 0.7);
+            --text-light: #ffffff;
+            --text-gray: #b0b0d0;
+            --gradient-primary: linear-gradient(90deg, var(--neon-blue), var(--neon-purple), var(--neon-pink));
+            --gradient-secondary: linear-gradient(90deg, var(--neon-orange), var(--neon-pink), var(--neon-purple));
+            --gradient-green: linear-gradient(90deg, var(--neon-green), var(--neon-blue));
+            --gradient-aurora: linear-gradient(135deg, rgba(0, 243, 255, 0.1), rgba(157, 78, 221, 0.1), rgba(255, 42, 109, 0.1));
+            --shadow-glow: 0 0 20px rgba(0, 243, 255, 0.5);
+            --shadow-glow-purple: 0 0 25px rgba(157, 78, 221, 0.6);
+            --shadow-glow-pink: 0 0 25px rgba(255, 42, 109, 0.6);
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+            cursor: default;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 120px 0;
+            position: relative;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 25px;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: textShine 3s infinite alternate;
+            background-size: 200% auto;
+        }
+
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 60px;
+            text-align: center;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes textShine {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        @keyframes gradientMove {
+            0% { transform: translate(0%, 0%) rotate(0deg); }
+            100% { transform: translate(-10%, -10%) rotate(5deg); }
+        }
+
+        @keyframes floatParticle {
+            0% { transform: translateY(0) translateX(0); opacity: 0.3; }
+            25% { transform: translateY(-20px) translateX(10px); opacity: 0.6; }
+            50% { transform: translateY(-40px) translateX(-10px); opacity: 0.3; }
+            75% { transform: translateY(-20px) translateX(-5px); opacity: 0.6; }
+            100% { transform: translateY(0) translateX(0); opacity: 0.3; }
+        }
+
+        @keyframes glowPulse {
+            0%, 100% { box-shadow: var(--shadow-glow); }
+            50% { box-shadow: 0 0 30px rgba(0, 243, 255, 0.8); }
+        }
+
+        @keyframes floatBtn {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes rippleEffect {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        @keyframes gradientShift {
+            0% { transform: translateX(-10%) translateY(-10%); }
+            100% { transform: translateX(10%) translateY(10%); }
+        }
+
+        @keyframes pulseIcon {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* ===== BACKGROUND ANIMATIONS ===== */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            overflow: hidden;
+        }
+
+        .gradient-bg {
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 20%, rgba(0, 243, 255, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(157, 78, 221, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 60%, rgba(255, 42, 109, 0.1) 0%, transparent 50%);
+            animation: gradientMove 20s ease-in-out infinite alternate;
+        }
+
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background-color: var(--neon-blue);
+            border-radius: 50%;
+            filter: blur(1px);
+            animation: floatParticle 15s infinite linear;
+        }
+
+        /* ===== MOUSE LIGHT EFFECT ===== */
+        .mouse-light {
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(0, 243, 255, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease-out;
+            filter: blur(30px);
+        }
+
+        /* ===== HEADER & NAVIGATION ===== */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 0;
+            z-index: 1000;
+            background: rgba(10, 10, 20, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+        }
+
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: textShine 5s infinite alternate;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav li {
+            margin-left: 40px;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            padding: 5px 0;
+            transition: var(--transition);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--neon-blue);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-light);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 0;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            z-index: 2;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            color: var(--text-light);
+        }
+
+        .hero-highlight {
+            display: inline-block;
+            background: rgba(0, 243, 255, 0.1);
+            padding: 15px 25px;
+            border-radius: 50px;
+            margin-top: 30px;
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            backdrop-filter: blur(5px);
+        }
+
+        .hero-highlight i {
+            color: var(--neon-blue);
+            margin-right: 10px;
+            animation: pulseIcon 2s infinite;
+        }
+
+        /* ===== BUTTON STYLES ===== */
+        .btn {
+            display: inline-block;
+            padding: 20px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: none;
+            z-index: 1;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: var(--shadow-glow);
+            animation: glowPulse 2s infinite;
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 0 40px rgba(0, 243, 255, 0.8);
+            transform: translateY(-5px);
+        }
+
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.7);
+            transform: scale(0);
+            animation: rippleEffect 0.6s linear;
+            pointer-events: none;
+        }
+
+        /* ===== SERVICES SECTION ===== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .service-card {
+            background: var(--dark-card);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px 30px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 243, 255, 0.05) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            border-color: var(--neon-purple);
+            box-shadow: var(--shadow-glow-purple);
+        }
+
+        .service-card:hover::after {
+            opacity: 1;
+        }
+
+        .service-icon {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            transition: var(--transition);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.2);
+        }
+
+        /* ===== SUPPORT SECTION ===== */
+        .support {
+            background: var(--dark-bg-2);
+        }
+
+        .support-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .support-card {
+            background: var(--dark-card);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px 30px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .support-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 243, 255, 0.1), transparent);
+            transition: left 0.7s ease;
+        }
+
+        .support-card:hover {
+            transform: translateY(-15px);
+            border-color: var(--neon-blue);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .support-card:hover::before {
+            left: 100%;
+        }
+
+        .support-icon {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            color: var(--neon-green);
+        }
+
+        /* ===== DEVELOPMENT SECTION ===== */
+        .development-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .development-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 40px 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .development-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 243, 255, 0.05), rgba(157, 78, 221, 0.05));
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .development-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--neon-pink);
+            box-shadow: var(--shadow-glow-pink);
+        }
+
+        .development-card:hover::before {
+            opacity: 1;
+        }
+
+        .development-icon {
+            font-size: 3rem;
+            margin-bottom: 25px;
+            color: var(--neon-orange);
+        }
+
+        /* ===== PROCESS SECTION ===== */
+        .process {
+            background: var(--dark-bg-2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .process::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(157, 78, 221, 0.1) 0%, transparent 50%);
+            z-index: -1;
+        }
+
+        .process-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 80px auto 0;
+        }
+
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+            box-shadow: var(--shadow-glow);
+        }
+
+        .process-step {
+            display: flex;
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .process-step:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .process-step:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .step-content {
+            flex: 1;
+            padding: 30px;
+            background: var(--dark-card);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .process-step:hover .step-content {
+            border-color: var(--neon-green);
+            box-shadow: 0 0 25px rgba(0, 255, 157, 0.4);
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            z-index: 2;
+            box-shadow: var(--shadow-glow);
+            transition: var(--transition);
+        }
+
+        .process-step:hover .step-number {
+            transform: translate(-50%, -50%) scale(1.1);
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.8);
+        }
+
+        .step-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--neon-green);
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-aurora);
+            filter: blur(50px);
+            z-index: -1;
+            animation: gradientShift 8s ease-in-out infinite alternate;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .ceo-image {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-glow-purple);
+            transition: var(--transition);
+        }
+
+        .ceo-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 40px rgba(157, 78, 221, 0.8);
+        }
+
+        .about-text {
+            background: var(--dark-card);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .ceo-name {
+            color: var(--neon-blue);
+            margin-bottom: 10px;
+        }
+
+        /* ===== SOCIAL SECTION ===== */
+        .social {
+            background: var(--dark-bg-2);
+        }
+
+        .social-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 60px;
+        }
+
+        .social-card {
+            width: 280px;
+            text-align: center;
+            padding: 40px 30px;
+            background: var(--dark-card);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+        }
+
+        .social-card:hover {
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: var(--shadow-glow-purple);
+            border-color: var(--neon-purple);
+        }
+
+        .social-icon {
+            font-size: 4rem;
+            margin-bottom: 25px;
+            transition: var(--transition);
+        }
+
+        .social-card:hover .social-icon {
+            transform: scale(1.2);
+        }
+
+        .social-icon.fa-facebook {
+            color: #1877F2;
+        }
+
+        .social-icon.fa-tiktok {
+            color: #000000;
+        }
+
+        .social-icon.fa-youtube {
+            color: #FF0000;
+        }
+
+        .social-icon.fa-instagram {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .social-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--neon-blue);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            color: var(--neon-pink);
+        }
+
+        /* ===== FINAL CTA SECTION ===== */
+        .final-cta {
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 243, 255, 0.1), rgba(157, 78, 221, 0.1), rgba(255, 42, 109, 0.1));
+            filter: blur(50px);
+            z-index: -1;
+            animation: gradientShift 8s ease-in-out infinite alternate;
+        }
+
+        .final-cta h2 {
+            margin-bottom: 30px;
+        }
+
+        /* ===== FLOATING CTA ===== */
+        .floating-cta {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+        }
+
+        .floating-btn {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            box-shadow: var(--shadow-glow);
+            text-decoration: none;
+            transition: var(--transition);
+            animation: floatBtn 3s infinite ease-in-out;
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.1) rotate(10deg);
+            box-shadow: 0 0 40px rgba(0, 243, 255, 0.8);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: rgba(5, 5, 10, 0.95);
+            padding: 70px 0 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo-img {
+            height: 40px;
+            width: auto;
+            border-radius: 6px;
+        }
+
+        .footer-logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .footer-warning {
+            background: rgba(255, 42, 109, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid var(--neon-pink);
+            margin-top: 20px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-gray);
+        }
+
+        /* ===== SCROLL ANIMATIONS ===== */
+        .section-hidden {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+
+        .section-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2.5rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .process-timeline::before {
+                left: 30px;
+            }
+            
+            .process-step {
+                flex-direction: row !important;
+                margin-left: 60px;
+            }
+            
+            .step-number {
+                left: -80px;
+                transform: translateY(-50%);
+            }
+            
+            .process-step:hover .step-number {
+                transform: translateY(-50%) scale(1.1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(10, 10, 20, 0.95);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                padding: 20px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            nav li {
+                margin: 15px 0;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .hero {
+                height: 90vh;
+            }
+            
+            section {
+                padding: 80px 0;
+            }
+            
+            .services-grid, .support-cards, .development-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .social-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .social-card {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .btn {
+                padding: 15px 30px;
+                font-size: 1rem;
+            }
+            
+            .hero-highlight {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
+            
+            .floating-btn {
+                width: 70px;
+                height: 70px;
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Mouse Light Effect -->
+    <div class="mouse-light" id="mouse-light"></div>
+    
+    <!-- Background Animation -->
+    <div class="bg-animation">
+        <div class="gradient-bg"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="https://sf-static.upanhlaylink.com/img/image_202601012d6188401b0944c7c779ed44dcaec20a.jpg" 
+                     alt="Devsier Logo" class="logo-img">
+                <div class="logo-text">DEVSIER</div>
+            </div>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#home">TRANG CHỦ</a></li>
+                    <li><a href="#services">DỊCH VỤ</a></li>
+                    <li><a href="#support">HỖ TRỢ</a></li>
+                    <li><a href="#development">PHÁT TRIỂN</a></li>
+                    <li><a href="#process">QUY TRÌNH</a></li>
+                    <li><a href="#contact">LIÊN HỆ</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content section-hidden">
+            <h1>GIẢI PHÁP DỊCH VỤ MẠNG XÃ HỘI ĐA NỀN TẢNG</h1>
+            <p>Công ty Devsier cung cấp dịch vụ mạng xã hội chuyên nghiệp cho Facebook, TikTok, YouTube, Instagram. Tăng tương tác thực, phát triển kênh bền vững, bảo mật tài khoản an toàn.</p>
+            <a href="#contact" class="btn btn-primary">
+                <i class="fas fa-comment-dots"></i> TƯ VẤN MIỄN PHÍ QUA ZALO
+            </a>
+            <div class="hero-highlight">
+                <i class="fas fa-phone-alt"></i>
+                <strong>Zalo: 0866.977.507</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>DỊCH VỤ MẠNG XÃ HỘI CHUYÊN NGHIỆP</h2>
+            <div class="services-grid">
+                <div class="service-card section-hidden">
+                    <div class="service-icon">
+                        <i class="fab fa-facebook-square"></i>
+                    </div>
+                    <h3>Dịch vụ Facebook</h3>
+                    <p>Giải pháp toàn diện cho Facebook: tối ưu fanpage bán hàng, tăng tương tác bài viết, xử lý tài khoản bị hạn chế, tư vấn chiến lược nội dung hiệu quả.</p>
+                    <p><strong>Ứng dụng:</strong> Cá nhân kinh doanh, doanh nghiệp vừa và nhỏ, người nổi tiếng xây dựng thương hiệu.</p>
+                </div>
+                
+                <div class="service-card section-hidden">
+                    <div class="service-icon">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                    <h3>Giải pháp TikTok</h3>
+                    <p>Phát triển kênh TikTok từ A-Z: tăng view thực, tối ưu TikTok Shop, chiến lược content video ngắn viral, xây dựng cộng đồng tương tác chất lượng.</p>
+                    <p><strong>Ứng dụng:</strong> Content creator, người bán hàng qua video, thương hiệu muốn tiếp cận Gen Z.</p>
+                </div>
+                
+                <div class="service-card section-hidden">
+                    <div class="service-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <h3>Phát triển YouTube</h3>
+                    <p>Chiến lược phát triển kênh YouTube bền vững: tăng lượt xem chất lượng, tối ưu SEO video, xây dựng lòng trung thành của người xem, tối ưu doanh thu.</p>
+                    <p><strong>Ứng dụng:</strong> YouTuber, công ty sản xuất nội dung, giáo viên online, chuyên gia chia sẻ kiến thức.</p>
+                </div>
+                
+                <div class="service-card section-hidden">
+                    <div class="service-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3>Dịch vụ Instagram</h3>
+                    <p>Tối ưu hóa Instagram profile: tăng follow thực, phát triển Reels & Story, xây dựng hình ảnh thương hiệu đồng nhất, tối ưu chuyển đổi từ Instagram.</p>
+                    <p><strong>Ứng dụng:</strong> Người làm đẹp, nhiếp ảnh gia, thương hiệu thời trang, nhà hàng - khách sạn.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section id="support" class="support">
+        <div class="container">
+            <h2>HỖ TRỢ & GIẢI PHÁP TÀI KHOẢN</h2>
+            <div class="support-cards">
+                <div class="support-card section-hidden">
+                    <div class="support-icon">
+                        <i class="fas fa-unlock-alt"></i>
+                    </div>
+                    <h3>Khôi phục quyền truy cập</h3>
+                    <p>Hỗ trợ xử lý các trường hợp tài khoản bị khóa, bị hack, mất quyền đăng nhập. Phương pháp an toàn, tuân thủ chính sách nền tảng.</p>
+                    <p><strong>Áp dụng:</strong> Facebook, Instagram, TikTok, YouTube.</p>
+                </div>
+                
+                <div class="support-card section-hidden">
+                    <div class="support-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Xử lý sự cố & hạn chế</h3>
+                    <p>Giải quyết các vấn đề kỹ thuật: tài khoản bị giới hạn đăng bài, bị report, không nhận được mã xác thực, lỗi đăng nhập.</p>
+                    <p><strong>Áp dụng:</strong> Mọi nền tảng mạng xã hội gặp sự cố kỹ thuật.</p>
+                </div>
+                
+                <div class="support-card section-hidden">
+                    <div class="support-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Bảo mật & an toàn tài khoản</h3>
+                    <p>Tư vấn và thiết lập hệ thống bảo mật nhiều lớp, phòng tránh rủi ro mất quyền kiểm soát, bảo vệ dữ liệu cá nhân và doanh nghiệp.</p>
+                    <p><strong>Áp dụng:</strong> CEO, người có ảnh hưởng, doanh nghiệp có giá trị tài khoản cao.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Section -->
+    <section id="development" class="development">
+        <div class="container">
+            <h2>XÂY DỰNG & PHÁT TRIỂN KÊNH</h2>
+            <div class="development-cards">
+                <div class="development-card section-hidden">
+                    <div class="development-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>Fanpage bán hàng chuyên nghiệp</h3>
+                    <p>Xây dựng và tối ưu fanpage từ giao diện, nội dung đến chiến lược bán hàng. Tăng tỷ lệ chuyển đổi, xây dựng niềm tin với khách hàng.</p>
+                    <p><strong>Đối tượng:</strong> Người kinh doanh online, doanh nghiệp vừa và nhỏ.</p>
+                </div>
+                
+                <div class="development-card section-hidden">
+                    <div class="development-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>TikTok Channel hiệu quả</h3>
+                    <p>Phát triển kênh TikTok với chiến lược content rõ ràng, tối ưu hashtag, thời điểm đăng bài, xây dựng cộng đồng tương tác cao.</p>
+                    <p><strong>Đối tượng:</strong> Content creator, người bán hàng qua video, thương hiệu trẻ.</p>
+                </div>
+                
+                <div class="development-card section-hidden">
+                    <div class="development-icon">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <h3>YouTube Channel chất lượng</h3>
+                    <p>Xây dựng kênh YouTube từ ý tưởng, sản xuất nội dung đến tối ưu thuật toán. Tăng watch time, subscriber chất lượng, phát triển bền vững.</p>
+                    <p><strong>Đối tượng:</strong> YouTuber, chuyên gia giáo dục, công ty sản xuất nội dung.</p>
+                </div>
+                
+                <div class="development-card section-hidden">
+                    <div class="development-icon">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Instagram Profile thương hiệu</h3>
+                    <p>Xây dựng profile Instagram chuyên nghiệp, chiến lược content visual, tối ưu story highlight, phát triển cộng đồng tương tác cao.</p>
+                    <p><strong>Đối tượng:</strong> Người làm đẹp, nhiếp ảnh gia, thương hiệu lifestyle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process">
+        <div class="container">
+            <h2>QUY TRÌNH LÀM VIỆC TẠI DEVSIER</h2>
+            <div class="process-timeline">
+                <div class="process-step section-hidden">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>Tiếp nhận & phân tích</h3>
+                        <p>Khách hàng liên hệ qua Zalo, mô tả chi tiết vấn đề hoặc nhu cầu. Chuyên gia Devsier phân tích tình trạng, đánh giá khả năng xử lý.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step section-hidden">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Đề xuất giải pháp</h3>
+                        <p>Đưa ra phương án xử lý cụ thể, thời gian dự kiến, chi phí minh bạch (nếu có). Thảo luận và thống nhất với khách hàng trước khi triển khai.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step section-hidden">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Thực hiện chuyên nghiệp</h3>
+                        <p>Triển khai giải pháp đã thống nhất với sự giám sát của đội ngũ kỹ thuật. Cập nhật tiến độ thường xuyên cho khách hàng.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step section-hidden">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Đồng hành & hỗ trợ sau</h3>
+                        <p>Đồng hành cùng khách hàng cho đến khi đạt kết quả mong muốn. Hỗ trợ sau dịch vụ, tư vấn phòng tránh rủi ro trong tương lai.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>VỀ CÔNG TY DEVSIER</h2>
+            <div class="about-content">
+                <div class="ceo-image-container section-hidden">
+                    <img src="https://sf-static.upanhlaylink.com/view/image_20260101fb970128df3c55aa2a25a83325bd43da.jpg" 
+                         alt="CEO Nguyễn Đình Huy - Công ty Devsier" class="ceo-image">
+                </div>
+                <div class="about-text section-hidden">
+                    <h3 class="ceo-name">CEO NGUYỄN ĐÌNH HUY</h3>
+                    <p>Với hơn 7 năm kinh nghiệm trong lĩnh vực công nghệ và mạng xã hội, CEO Nguyễn Đình Huy đã trực tiếp xây dựng và phát triển Công ty Devsier thành đơn vị cung cấp dịch vụ mạng xã hội chuyên nghiệp hàng đầu.</p>
+                    <p>Dưới sự định hướng của CEO, Devsier tập trung vào các giải pháp an toàn, bền vững và tuân thủ chính sách của từng nền tảng. Mỗi dự án đều được đánh giá kỹ lưỡng trước khi triển khai để đảm bảo hiệu quả tối ưu cho khách hàng.</p>
+                    <p><strong>Cam kết từ Devsier:</strong> Minh bạch trong quy trình, bảo mật thông tin khách hàng, hỗ trợ tận tâm và đồng hành lâu dài.</p>
+                    <div class="hero-highlight" style="margin-top: 20px;">
+                        <i class="fas fa-phone-alt"></i>
+                        <strong>Zalo CEO: 0866.977.507</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Section -->
+    <section id="social" class="social">
+        <div class="container">
+            <h2>KẾT NỐI MẠNG XÃ HỘI</h2>
+            <div class="social-cards">
+                <div class="social-card section-hidden">
+                    <div class="social-icon">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <h3>Facebook</h3>
+                    <p>Nguyễn Đình Huy</p>
+                    <a href="https://www.facebook.com/heataex/" target="_blank" class="social-link">
+                        <i class="fas fa-external-link-alt"></i> Truy cập trang Facebook
+                    </a>
+                </div>
+                
+                <div class="social-card section-hidden">
+                    <div class="social-icon">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                    <h3>TikTok</h3>
+                    <p>Đình Huy Channel</p>
+                    <a href="https://www.tiktok.com/@dinhhuychannel.media" target="_blank" class="social-link">
+                        <i class="fas fa-external-link-alt"></i> Truy cập kênh TikTok
+                    </a>
+                </div>
+                
+                <div class="social-card section-hidden">
+                    <div class="social-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <h3>YouTube</h3>
+                    <p>Đình Huy Channel</p>
+                    <a href="https://www.youtube.com/@DinhHuyChannel" target="_blank" class="social-link">
+                        <i class="fas fa-external-link-alt"></i> Truy cập kênh YouTube
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="contact" class="final-cta">
+        <div class="container">
+            <h2>SẴN SÀNG THAY ĐỔI SỰ HIỆN DIỆN MXH CỦA BẠN?</h2>
+            <p style="font-size: 1.3rem; max-width: 700px; margin: 0 auto 40px; color: var(--text-light);">Liên hệ ngay để được chuyên gia Devsier tư vấn giải pháp phù hợp nhất với tình trạng và mục tiêu của bạn.</p>
+            <a href="https://zalo.me/0866977507" target="_blank" class="btn btn-primary" style="font-size: 1.4rem; padding: 22px 45px;">
+                <i class="fas fa-comment-dots"></i> LIÊN HỆ TƯ VẤN NGAY
+            </a>
+            <div class="hero-highlight" style="margin-top: 40px; font-size: 1.2rem;">
+                <i class="fas fa-phone-alt"></i>
+                <strong>Zalo: 0866.977.507</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating CTA -->
+    <div class="floating-cta">
+        <a href="https://zalo.me/0866977507" target="_blank" class="floating-btn">
+            <i class="fas fa-comment-dots"></i>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <img src="https://sf-static.upanhlaylink.com/img/image_202601012d6188401b0944c7c779ed44dcaec20a.jpg" 
+                             alt="Devsier Logo" class="footer-logo-img">
+                        <div class="footer-logo-text">DEVSIER</div>
+                    </div>
+                    <p><strong>Công ty Dịch vụ Và Giải Pháp Devsier</strong><br>
+                    Đơn vị cung cấp dịch vụ mạng xã hội chuyên nghiệp, uy tín hàng đầu tại Việt Nam.</p>
+                    <div class="hero-highlight" style="margin-top: 15px; display: inline-block;">
+                        <i class="fas fa-phone-alt"></i>
+                        <strong>Zalo: 0866.977.507</strong>
+                    </div>
+                </div>
+                
+                <div class="footer-services">
+                    <h3 style="margin-bottom: 20px; color: var(--text-light);">Dịch vụ chính</h3>
+                    <ul style="list-style: none; color: var(--text-gray);">
+                        <li style="margin-bottom: 10px;"><i class="fas fa-chevron-right" style="color: var(--neon-blue); margin-right: 10px;"></i> Dịch vụ Facebook</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-chevron-right" style="color: var(--neon-blue); margin-right: 10px;"></i> Giải pháp TikTok</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-chevron-right" style="color: var(--neon-blue); margin-right: 10px;"></i> Phát triển YouTube</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-chevron-right" style="color: var(--neon-blue); margin-right: 10px;"></i> Hỗ trợ tài khoản</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-warning">
+                    <h4 style="color: var(--neon-pink); margin-bottom: 10px;"><i class="fas fa-exclamation-triangle"></i> Lưu ý quan trọng</h4>
+                    <p>Chỉ liên hệ qua số Zalo chính thức: <strong>0866.977.507</strong>. Không chia sẻ mật khẩu với bất kỳ ai. Devsier không yêu cầu mật khẩu tài khoản của bạn trong quá trình hỗ trợ.</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2023 Công ty Dịch vụ Và Giải Pháp Devsier. Tất cả các quyền được bảo lưu.</p>
+                <p style="margin-top: 10px; font-size: 0.9rem;">Mọi dịch vụ đều được thực hiện an toàn, tuân thủ chính sách nền tảng. Kết quả có thể khác nhau tùy theo tình trạng cụ thể.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // ===== PARTICLE SYSTEM =====
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random position
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                
+                // Random size
+                const size = Math.random() * 3 + 1;
+                
+                // Random color
+                const colors = ['var(--neon-blue)', 'var(--neon-purple)', 'var(--neon-pink)', 'var(--neon-green)'];
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                
+                // Random animation delay
+                const delay = Math.random() * 15;
+                
+                // Apply styles
+                particle.style.left = `${posX}%`;
+                particle.style.top = `${posY}%`;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.backgroundColor = color;
+                particle.style.animationDelay = `${delay}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // ===== MOUSE LIGHT EFFECT =====
+        function mouseLightEffect() {
+            const mouseLight = document.getElementById('mouse-light');
+            
+            document.addEventListener('mousemove', (e) => {
+                mouseLight.style.left = `${e.clientX}px`;
+                mouseLight.style.top = `${e.clientY}px`;
+            });
+            
+            // Hide light on touch devices
+            if ('ontouchstart' in window) {
+                mouseLight.style.display = 'none';
+            }
+        }
+        
+        // ===== RIPPLE EFFECT FOR BUTTONS =====
+        function addRippleEffect() {
+            document.querySelectorAll('.btn').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    const ripple = document.createElement('span');
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+                    
+                    ripple.style.cssText = `
+                        width: ${size}px;
+                        height: ${size}px;
+                        left: ${x}px;
+                        top: ${y}px;
+                    `;
+                    ripple.classList.add('ripple');
+                    
+                    this.appendChild(ripple);
+                    setTimeout(() => ripple.remove(), 600);
+                });
+            });
+        }
+        
+        // ===== SCROLL REVEAL ANIMATION =====
+        function scrollReveal() {
+            const sections = document.querySelectorAll('.section-hidden');
+            const windowHeight = window.innerHeight;
+            const revealPoint = 150;
+            
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                
+                if (sectionTop < windowHeight - revealPoint) {
+                    section.classList.add('section-visible');
+                }
+            });
+        }
+        
+        // ===== MOBILE MENU TOGGLE =====
+        function mobileMenuToggle() {
+            const mobileMenuBtn = document.getElementById('mobile-menu');
+            const navMenu = document.getElementById('nav-menu');
+            
+            mobileMenuBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                mobileMenuBtn.innerHTML = navMenu.classList.contains('active') 
+                    ? '<i class="fas fa-times"></i>' 
+                    : '<i class="fas fa-bars"></i>';
+            });
+            
+            // Close menu when clicking a link
+            document.querySelectorAll('nav a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                });
+            });
+        }
+        
+        // ===== SMOOTH SCROLLING =====
+        function smoothScrolling() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    if (this.getAttribute('href') === '#') return;
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+        
+        // ===== HEADER SCROLL EFFECT =====
+        function headerScrollEffect() {
+            const header = document.querySelector('header');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    header.style.background = 'rgba(10, 10, 20, 0.95)';
+                    header.style.backdropFilter = 'blur(15px)';
+                    header.style.boxShadow = '0 5px 30px rgba(0, 0, 0, 0.2)';
+                } else {
+                    header.style.background = 'rgba(10, 10, 20, 0.8)';
+                    header.style.backdropFilter = 'blur(10px)';
+                    header.style.boxShadow = 'none';
+                }
+            });
+        }
+        
+        // ===== IMAGE PRELOADING =====
+        function preloadImages() {
+            const images = [
+                'https://sf-static.upanhlaylink.com/img/image_202601012d6188401b0944c7c779ed44dcaec20a.jpg',
+                'https://sf-static.upanhlaylink.com/view/image_20260101fb970128df3c55aa2a25a83325bd43da.jpg'
+            ];
+            
+            images.forEach(src => {
+                const img = new Image();
+                img.src = src;
+            });
+        }
+        
+        // ===== CARD HOVER EFFECTS =====
+        function enhanceCardHover() {
+            document.querySelectorAll('.service-card, .support-card, .development-card, .social-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    if (this.classList.contains('service-card')) {
+                        this.style.transform = 'translateY(-15px) scale(1.02)';
+                    } else {
+                        this.style.transform = 'translateY(-15px)';
+                    }
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        }
+        
+        // ===== ZALO CTA TRACKING =====
+        function trackZaloClicks() {
+            document.querySelectorAll('a[href*="zalo.me"]').forEach(zaloLink => {
+                zaloLink.addEventListener('click', function() {
+                    console.log('Zalo CTA clicked from:', this.textContent.trim());
+                    // Thêm tracking code analytics tại đây nếu cần
+                });
+            });
+        }
+        
+        // ===== INITIALIZE ALL FUNCTIONS =====
+        function initWebsite() {
+            // Initial reveal for hero section
+            setTimeout(() => {
+                document.querySelector('.hero-content').classList.add('section-visible');
+            }, 300);
+            
+            // Initialize all features
+            createParticles();
+            mouseLightEffect();
+            addRippleEffect();
+            scrollReveal();
+            mobileMenuToggle();
+            smoothScrolling();
+            headerScrollEffect();
+            preloadImages();
+            enhanceCardHover();
+            trackZaloClicks();
+            
+            // Add scroll event listener for reveal animations
+            window.addEventListener('scroll', scrollReveal);
+            
+            // Performance optimization for animations
+            let lastScrollTime = 0;
+            window.addEventListener('scroll', () => {
+                const now = Date.now();
+                if (now - lastScrollTime > 50) { // Throttle to 50ms
+                    scrollReveal();
+                    lastScrollTime = now;
+                }
+            });
+        }
+        
+        // ===== INITIALIZE ON DOM LOAD =====
+        document.addEventListener('DOMContentLoaded', initWebsite);
+    </script>
+</body>
+</html>
