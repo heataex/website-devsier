@@ -1,1277 +1,270 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <title>Devsier - Dịch Vụ Kỹ Thuật Số Cao Cấp | Tăng Tương Tác MXH, Bảo Mật Tài Khoản, Khôi Phục Facebook</title>
-    <meta name="description" content="Devsier cung cấp dịch vụ kỹ thuật số cao cấp: Tăng tương tác MXH, Phát triển kênh Social, Bảo mật tài khoản, Khôi phục Facebook/TikTok/YouTube bị hack, Đào tạo chuyên sâu. CEO Nguyễn Đình Huy với hệ sinh thái KhoSubRe.vn">
-    <meta name="keywords" content="dịch vụ mạng xã hội, tăng like follow, tăng tương tác facebook, dịch vụ tiktok youtube, bảo mật tài khoản facebook, khôi phục facebook bị hack, dịch vụ social media việt nam, đào tạo dịch vụ mạng xã hội, Devsier, Nguyễn Đình Huy, KhoSubRe">
-    <meta name="author" content="Devsier - Nguyễn Đình Huy">
-    
-    <!-- Schema.org markup -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Công Ty Dịch Vụ Và Giải Pháp Devsier",
-        "url": "https://devsier.com",
-        "logo": "https://i.ibb.co/Jj0bxMWW/blob.jpg",
-        "sameAs": [
-            "https://www.facebook.com/heataex/",
-            "https://www.tiktok.com/@dinhhuychannel.media",
-            "https://www.youtube.com/@DinhHuyChannel"
-        ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Nguyễn Đình Huy",
-        "url": "https://devsier.com",
-        "image": "https://i.ibb.co/v5JwvVZ/blob.jpg",
-        "jobTitle": "CEO & Founder",
-        "worksFor": {
-            "@type": "Organization",
-            "name": "Công Ty Dịch Vụ Và Giải Pháp Devsier"
-        },
-        "sameAs": [
-            "https://www.facebook.com/heataex/",
-            "https://www.tiktok.com/@dinhhuychannel.media",
-            "https://www.youtube.com/@DinhHuyChannel"
-        ]
-    }
-    </script>
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --primary-dark: #050510;
-            --dark-bg: #0A0A15;
-            --gradient-start: #0066ff;
-            --gradient-mid: #6a00ff;
-            --gradient-end: #9400d3;
-            --neon-cyan: #00f3ff;
-            --neon-purple: #b967ff;
-            --text-light: #ffffff;
-            --text-gray: #b0b0c0;
-            --glass-bg: rgba(20, 20, 40, 0.8);
-            --glass-border: rgba(100, 100, 255, 0.2);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--primary-dark);
-            color: var(--text-light);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        
-        /* Performance */
-        .will-change {
-            will-change: transform, opacity;
-        }
-        
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-        
-        ::-webkit-scrollbar-track {
-            background: rgba(10, 10, 20, 0.8);
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-mid));
-            border-radius: 5px;
-        }
-        
-        /* Typography */
-        h1, h2, h3, h4, .font-tech {
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        section {
-            padding: 100px 0;
-            position: relative;
-        }
-        
-        /* Background Effects */
-        .bg-gradient {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -2;
-            background: 
-                radial-gradient(circle at 20% 30%, rgba(0, 102, 255, 0.1) 0%, transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(106, 0, 255, 0.08) 0%, transparent 40%),
-                linear-gradient(135deg, #050510 0%, #0a0a20 50%, #050510 100%);
-        }
-        
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: 20px 0;
-            background: rgba(5, 5, 16, 0.95);
-            border-bottom: 1px solid rgba(0, 243, 255, 0.1);
-            backdrop-filter: blur(10px);
-        }
-        
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        /* Logo */
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        .logo-img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--neon-cyan);
-            box-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
-        }
-        
-        .logo-text {
-            font-size: 1.8rem;
-            font-weight: 700;
-            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        
-        /* Navigation */
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-        
-        .nav-link {
-            color: var(--text-light);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1rem;
-            transition: color 0.3s ease;
-            position: relative;
-            padding: 5px 0;
-        }
-        
-        .nav-link:hover {
-            color: var(--neon-cyan);
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple));
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        /* Mobile Menu */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--text-light);
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        
-        /* Hero Section */
-        .hero {
-            padding-top: 150px;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-        
-        .hero-content {
-            max-width: 800px;
-        }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            line-height: 1.2;
-            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.2rem;
-            color: var(--text-gray);
-            margin-bottom: 40px;
-            max-width: 600px;
-        }
-        
-        .highlight {
-            color: var(--neon-cyan);
-            font-weight: 600;
-        }
-        
-        /* CTA Button */
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 15px 35px;
-            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid));
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-family: 'Orbitron', sans-serif;
-            letter-spacing: 1px;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 102, 255, 0.4);
-            background: linear-gradient(135deg, var(--gradient-mid), var(--gradient-end));
-        }
-        
-        /* Section Titles */
-        .section-title {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 50px;
-            position: relative;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple));
-            border-radius: 2px;
-        }
-        
-        /* Social Section */
-        .social-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-        
-        .social-card {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        
-        .social-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--neon-cyan);
-            box-shadow: 0 10px 30px rgba(0, 243, 255, 0.2);
-        }
-        
-        .social-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            color: var(--neon-cyan);
-        }
-        
-        .social-link {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 25px;
-            border: 1px solid var(--neon-purple);
-            color: var(--neon-purple);
-            text-decoration: none;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-        
-        .social-link:hover {
-            background: var(--neon-purple);
-            color: var(--primary-dark);
-        }
-        
-        /* Services Section */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-        }
-        
-        .service-card {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 15px;
-            padding: 30px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--neon-cyan);
-            box-shadow: 0 15px 35px rgba(0, 243, 255, 0.15);
-        }
-        
-        .service-icon {
-            font-size: 2.5rem;
-            color: var(--neon-cyan);
-            margin-bottom: 20px;
-        }
-        
-        .service-number {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 3rem;
-            font-family: 'Orbitron', sans-serif;
-            color: rgba(255, 255, 255, 0.05);
-        }
-        
-        /* KhoSubRe Section */
-        .khosubre-section {
-            text-align: center;
-            background: linear-gradient(135deg, rgba(0, 102, 255, 0.05), rgba(106, 0, 255, 0.05));
-            border-radius: 20px;
-            padding: 60px 40px;
-            margin: 60px auto;
-            max-width: 800px;
-        }
-        
-        .khosubre-logo {
-            width: 120px;
-            height: 120px;
-            border-radius: 20px;
-            object-fit: cover;
-            margin-bottom: 30px;
-            border: 2px solid var(--neon-purple);
-            box-shadow: 0 0 30px rgba(185, 103, 255, 0.3);
-        }
-        
-        /* Process Section */
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .process-step {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        
-        .process-step:hover {
-            transform: translateY(-10px);
-            border-color: var(--neon-cyan);
-        }
-        
-        .step-number {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-        
-        /* CEO Section */
-        .ceo-section {
-            text-align: center;
-        }
-        
-        .ceo-card {
-            display: flex;
-            align-items: center;
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 50px;
-            max-width: 900px;
-            margin: 0 auto;
-            gap: 40px;
-        }
-        
-        .ceo-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--neon-cyan);
-            box-shadow: 0 0 30px rgba(0, 243, 255, 0.3);
-            flex-shrink: 0;
-        }
-        
-        .ceo-info {
-            text-align: left;
-        }
-        
-        /* Testimonials */
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .testimonial-card {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 15px;
-            padding: 30px;
-            position: relative;
-        }
-        
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 20px;
-            position: relative;
-            padding-left: 20px;
-        }
-        
-        .testimonial-text::before {
-            content: '"';
-            position: absolute;
-            left: 0;
-            top: -10px;
-            font-size: 3rem;
-            color: var(--neon-purple);
-            opacity: 0.3;
-        }
-        
-        /* FAQ Section */
-        .faq-grid {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .faq-item {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 10px;
-            margin-bottom: 15px;
-            overflow: hidden;
-        }
-        
-        .faq-question {
-            padding: 20px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 600;
-        }
-        
-        .faq-answer {
-            padding: 0 20px;
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-        
-        .faq-item.active .faq-answer {
-            padding: 0 20px 20px;
-            max-height: 500px;
-        }
-        
-        /* Footer */
-        footer {
-            background: rgba(5, 5, 16, 0.95);
-            padding: 60px 0 30px;
-            border-top: 1px solid rgba(0, 243, 255, 0.1);
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        
-        .social-icons {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .social-icons a {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(0, 243, 255, 0.2);
-            color: var(--text-light);
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-        }
-        
-        .social-icons a:hover {
-            background: var(--neon-purple);
-            transform: translateY(-3px);
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            color: var(--text-gray);
-            font-size: 0.9rem;
-        }
-        
-        /* Stats Section */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin: 60px 0;
-        }
-        
-        .stat-card {
-            text-align: center;
-            padding: 30px 20px;
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 15px;
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--neon-cyan);
-            margin-bottom: 10px;
-            font-family: 'Orbitron', sans-serif;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                position: fixed;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background: rgba(5, 5, 16, 0.95);
-                flex-direction: column;
-                padding: 20px;
-                text-align: center;
-                gap: 20px;
-                z-index: 999;
-            }
-            
-            .nav-links.active {
-                display: flex;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .ceo-card {
-                flex-direction: column;
-                text-align: center;
-                padding: 30px;
-            }
-            
-            .ceo-info {
-                text-align: center;
-            }
-            
-            .container {
-                padding: 0 15px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1rem;
-            }
-            
-            .services-grid,
-            .social-grid,
-            .testimonial-grid,
-            .process-steps {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        /* Animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .fade-in {
-            animation: fadeIn 0.6s ease forwards;
-        }
-        
-        /* Loading */
-        .loading {
-            opacity: 0;
-        }
-        
-        .loaded {
-            opacity: 1;
-            transition: opacity 0.3s ease;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Devsier - Dev Phần Mềm, Website/App & Giải Pháp Mạng Xã Hội</title>
+  <meta name="description" content="Devsier nhận dev phần mềm, website, app, dashboard, hệ thống quản trị, automation và cung cấp giải pháp mạng xã hội, bảo mật, khôi phục tài khoản, phát triển kênh Social." />
+  <meta name="keywords" content="dev phần mềm, thiết kế website, lập trình app, dashboard quản trị, automation, giải pháp mạng xã hội, tăng tương tác MXH, bảo mật tài khoản, khôi phục Facebook, Devsier, Nguyễn Đình Huy" />
+  <meta name="author" content="Devsier - Nguyễn Đình Huy" />
+  <link rel="canonical" href="https://devsier.com" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
-    <!-- ===== SEO BOOST (ADD ONLY – DO NOT EDIT EXISTING CODE) ===== -->
+  <meta property="og:site_name" content="Devsier" />
+  <meta property="og:locale" content="vi_VN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Devsier – Dev Phần Mềm & Giải Pháp Mạng Xã Hội" />
+  <meta property="og:description" content="Nhận dev phần mềm, website/app, hệ thống quản trị, automation và giải pháp MXH cho cá nhân, shop, doanh nghiệp." />
+  <meta property="og:url" content="https://devsier.com" />
+  <meta property="og:image" content="https://i.ibb.co/Jj0bxMWW/blob.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-<link rel="canonical" href="https://devsier.com">
-
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<meta name="googlebot" content="index, follow">
-<meta name="bingbot" content="index, follow">
-
-<!-- Open Graph -->
-<meta property="og:site_name" content="Devsier">
-<meta property="og:locale" content="vi_VN">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Devsier – Giải Pháp Kỹ Thuật Số & Dịch Vụ Mạng Xã Hội Cao Cấp">
-<meta property="og:description" content="Devsier – Công ty dịch vụ mạng xã hội, bảo mật và khôi phục tài khoản Facebook, TikTok, YouTube. CEO Nguyễn Đình Huy sáng lập.">
-<meta property="og:url" content="https://devsier.com">
-<meta property="og:image" content="https://i.ibb.co/Jj0bxMWW/blob.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Devsier – Dịch Vụ Kỹ Thuật Số & MXH Uy Tín">
-<meta name="twitter:description" content="Giải pháp mạng xã hội, bảo mật và khôi phục tài khoản. Devsier – CEO Nguyễn Đình Huy.">
-<meta name="twitter:image" content="https://i.ibb.co/Jj0bxMWW/blob.jpg">
-
-<!-- Geo / Local SEO -->
-<meta name="geo.region" content="VN">
-<meta name="geo.placename" content="Vietnam">
-<meta name="geo.position" content="14.0583;108.2772">
-<meta name="ICBM" content="14.0583,108.2772">
-
-<!-- Verification (optional – safe to keep empty) -->
-<meta name="google-site-verification" content="">
-<meta name="msvalidate.01" content="">
-
-<!-- Schema Website -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Devsier",
-  "url": "https://devsier.com",
-  "publisher": {
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Công Ty Dịch Vụ Và Giải Pháp Devsier",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://i.ibb.co/Jj0bxMWW/blob.jpg"
-    }
+    "url": "https://devsier.com",
+    "logo": "https://i.ibb.co/Jj0bxMWW/blob.jpg",
+    "sameAs": [
+      "https://www.facebook.com/heataex/",
+      "https://www.tiktok.com/@dinhhuychannel.media",
+      "https://www.youtube.com/@DinhHuyChannel"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+84-866-977-507",
+      "contactType": "customer support",
+      "areaServed": "VN",
+      "availableLanguage": ["Vietnamese"]
+    },
+    "makesOffer": [
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Phát triển phần mềm theo yêu cầu"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Website, App, Dashboard & Automation"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Giải pháp mạng xã hội và phát triển kênh"}}
+    ]
   }
-}
-</script>
+  </script>
 
-<!-- ===== END SEO BOOST ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    :root{
+      --bg:#03050d;
+      --bg2:#080b18;
+      --panel:rgba(13,18,39,.72);
+      --panel2:rgba(255,255,255,.055);
+      --stroke:rgba(148,163,184,.18);
+      --stroke2:rgba(34,211,238,.32);
+      --txt:#f8fbff;
+      --muted:#aab6d3;
+      --dim:#75819d;
+      --cyan:#19e6ff;
+      --blue:#3b82f6;
+      --violet:#8b5cf6;
+      --pink:#ec4899;
+      --green:#2df5a8;
+      --orange:#ffb86b;
+      --danger:#ff5c8a;
+      --radius:28px;
+      --shadow:0 30px 100px rgba(0,0,0,.45);
+      --glow:0 0 40px rgba(25,230,255,.28), 0 0 90px rgba(139,92,246,.2);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:92px}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--txt);line-height:1.65;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;z-index:-5;background:
+      radial-gradient(circle at 10% 8%, rgba(25,230,255,.18), transparent 34%),
+      radial-gradient(circle at 84% 18%, rgba(236,72,153,.16), transparent 30%),
+      radial-gradient(circle at 50% 92%, rgba(139,92,246,.16), transparent 36%),
+      linear-gradient(135deg,#03050d 0%,#071025 45%,#03050d 100%)}
+    body:after{content:"";position:fixed;inset:0;z-index:-4;pointer-events:none;opacity:.18;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(circle at center,black,transparent 78%)}
+    a{color:inherit;text-decoration:none} img{max-width:100%;display:block} button,input{font:inherit}
+    .container{width:min(1200px,calc(100% - 40px));margin:auto}.wide{width:min(1360px,calc(100% - 40px));margin:auto}
+    .mono{font-family:"JetBrains Mono",monospace}.display{font-family:"Space Grotesk",Inter,sans-serif;letter-spacing:-.04em}.grad{background:linear-gradient(100deg,var(--cyan),#fff,var(--violet),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}.muted{color:var(--muted)}
+    .noise{position:fixed;inset:0;z-index:-3;pointer-events:none;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+    .orb{position:fixed;border-radius:999px;filter:blur(20px);pointer-events:none;z-index:-2;opacity:.75}.orb.one{width:310px;height:310px;background:rgba(25,230,255,.13);left:-110px;top:28%;animation:float 13s infinite alternate}.orb.two{width:390px;height:390px;background:rgba(139,92,246,.12);right:-150px;top:10%;animation:float 16s infinite alternate-reverse}.orb.three{width:240px;height:240px;background:rgba(236,72,153,.12);right:15%;bottom:-90px;animation:float 12s infinite alternate}
+    @keyframes float{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(35px,-55px,0) scale(1.15)}}
+    .cursor-glow{position:fixed;width:520px;height:520px;border-radius:999px;background:radial-gradient(circle,rgba(25,230,255,.14),transparent 62%);transform:translate(-50%,-50%);pointer-events:none;z-index:-1;opacity:.7}
+    header{position:fixed;top:14px;left:0;right:0;z-index:1000}.nav-shell{width:min(1240px,calc(100% - 28px));margin:auto;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:12px 14px;border:1px solid rgba(255,255,255,.12);background:rgba(5,8,20,.72);backdrop-filter:blur(20px);border-radius:999px;box-shadow:0 20px 70px rgba(0,0,0,.35)}
+    .brand{display:flex;align-items:center;gap:12px}.brand img{width:44px;height:44px;border-radius:16px;object-fit:cover;border:1px solid rgba(25,230,255,.7);box-shadow:0 0 28px rgba(25,230,255,.28)}.brand strong{font-family:"Space Grotesk";font-size:1.25rem;letter-spacing:-.03em}.brand span{display:block;font-size:.72rem;color:var(--muted);margin-top:-4px}.nav{display:flex;align-items:center;gap:6px}.nav a{font-size:.92rem;color:#d8e3ff;padding:10px 13px;border-radius:999px;transition:.25s}.nav a:hover{background:rgba(255,255,255,.08);color:#fff}.nav-cta{display:flex;gap:10px;align-items:center}.menu-btn{display:none;width:44px;height:44px;border:0;border-radius:50%;background:rgba(255,255,255,.08);color:#fff}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:13px 20px;font-weight:800;transition:.28s;position:relative;overflow:hidden;border:1px solid transparent;white-space:nowrap}.btn.primary{background:linear-gradient(135deg,var(--cyan),var(--blue),var(--violet));box-shadow:0 15px 45px rgba(59,130,246,.28);color:#fff}.btn.primary:before{content:"";position:absolute;inset:-2px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);transform:translateX(-130%) skewX(-20deg);transition:.65s}.btn.primary:hover:before{transform:translateX(130%) skewX(-20deg)}.btn.primary:hover{transform:translateY(-3px);box-shadow:var(--glow)}.btn.ghost{border-color:rgba(255,255,255,.16);background:rgba(255,255,255,.055);color:#fff}.btn.ghost:hover{border-color:rgba(25,230,255,.45);background:rgba(25,230,255,.08);transform:translateY(-3px)}
+    .hero{min-height:100vh;padding:150px 0 80px;position:relative}.hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:48px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid rgba(25,230,255,.25);background:rgba(25,230,255,.08);border-radius:999px;color:#dffaff;font-size:.86rem;font-weight:800;margin-bottom:22px}.pulse{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(45,245,168,.7);animation:pulse 1.8s infinite}@keyframes pulse{70%{box-shadow:0 0 0 13px rgba(45,245,168,0)}}
+    h1{font-size:clamp(3rem,7vw,6.95rem);line-height:.9;margin-bottom:24px}.lead{font-size:clamp(1.05rem,2vw,1.28rem);color:#c7d4f3;max-width:720px;margin-bottom:30px}.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin:28px 0 26px}.quick-proof{display:flex;gap:18px;flex-wrap:wrap;color:#cfe8ff}.proof-pill{display:flex;align-items:center;gap:9px;padding:10px 12px;border-radius:999px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.1);font-size:.92rem}.proof-pill i{color:var(--green)}
+    .dashboard{position:relative;min-height:570px;perspective:1200px}.dash-card{position:absolute;inset:0;border-radius:36px;background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.045));border:1px solid rgba(255,255,255,.16);box-shadow:var(--shadow);backdrop-filter:blur(24px);overflow:hidden;transform:rotateY(-8deg) rotateX(5deg);animation:tilt 7s ease-in-out infinite alternate}.dash-card:before{content:"";position:absolute;inset:-2px;background:radial-gradient(circle at 30% 0%,rgba(25,230,255,.28),transparent 35%),radial-gradient(circle at 100% 30%,rgba(236,72,153,.2),transparent 35%);pointer-events:none}.dash-top{position:relative;display:flex;align-items:center;justify-content:space-between;padding:20px;border-bottom:1px solid rgba(255,255,255,.1)}.dots{display:flex;gap:8px}.dots span{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.22)}.status{font-size:.8rem;color:var(--green)}.dash-body{position:relative;padding:24px}.metric-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}.metric{padding:18px;border-radius:24px;background:rgba(4,8,18,.55);border:1px solid rgba(255,255,255,.1)}.metric small{color:var(--muted)}.metric b{display:block;font-family:"Space Grotesk";font-size:2.2rem;margin-top:6px}.chart{height:150px;margin:18px 0;border-radius:24px;background:linear-gradient(180deg,rgba(25,230,255,.12),rgba(139,92,246,.05));border:1px solid rgba(255,255,255,.1);position:relative;overflow:hidden}.chart svg{position:absolute;inset:0;width:100%;height:100%}.code-window{border-radius:24px;background:#030712;border:1px solid rgba(25,230,255,.22);padding:18px;font-family:"JetBrains Mono";font-size:.82rem;color:#bffbff;box-shadow:inset 0 0 30px rgba(25,230,255,.05)}.code-window .pink{color:#ff8bd1}.code-window .green{color:#77f7c0}.floating-chip{position:absolute;z-index:4;padding:14px 16px;border-radius:20px;background:rgba(6,12,28,.82);border:1px solid rgba(255,255,255,.16);box-shadow:0 22px 60px rgba(0,0,0,.35);backdrop-filter:blur(16px);display:flex;align-items:center;gap:12px}.floating-chip i{width:38px;height:38px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(135deg,var(--cyan),var(--violet));}.floating-chip.one{top:54px;left:-28px}.floating-chip.two{bottom:70px;right:-16px}.floating-chip.three{bottom:190px;left:-46px}@keyframes tilt{to{transform:rotateY(-2deg) rotateX(2deg) translateY(-14px)}}
+    .strip{padding:22px 0;border-block:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.035);overflow:hidden}.marquee{display:flex;gap:22px;white-space:nowrap;animation:marquee 24s linear infinite}.marquee span{display:inline-flex;align-items:center;gap:10px;color:#d7e4ff;font-weight:800}.marquee i{color:var(--cyan)}@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    section{padding:105px 0}.section-head{max-width:820px;margin:0 auto 52px;text-align:center}.kicker{font-family:"JetBrains Mono";display:inline-flex;margin-bottom:14px;color:var(--cyan);font-weight:800;font-size:.84rem;letter-spacing:.08em;text-transform:uppercase}.section-head h2{font-family:"Space Grotesk";font-size:clamp(2.2rem,4.6vw,4rem);line-height:1;letter-spacing:-.04em;margin-bottom:18px}.section-head p{color:var(--muted);font-size:1.06rem}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.card{position:relative;padding:28px;border-radius:var(--radius);background:linear-gradient(145deg,rgba(255,255,255,.088),rgba(255,255,255,.035));border:1px solid rgba(255,255,255,.12);box-shadow:0 20px 60px rgba(0,0,0,.22);overflow:hidden;transition:.35s}.card:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at var(--mx,50%) var(--my,0%),rgba(25,230,255,.22),transparent 32%);opacity:0;transition:.35s;pointer-events:none}.card:hover{transform:translateY(-9px);border-color:rgba(25,230,255,.34);box-shadow:0 28px 80px rgba(0,0,0,.38)}.card:hover:before{opacity:1}.icon{width:58px;height:58px;border-radius:20px;display:grid;place-items:center;margin-bottom:20px;background:linear-gradient(135deg,rgba(25,230,255,.18),rgba(139,92,246,.18));border:1px solid rgba(25,230,255,.22);color:var(--cyan);font-size:1.45rem}.card h3{font-family:"Space Grotesk";font-size:1.45rem;letter-spacing:-.03em;margin-bottom:10px}.card p{color:#b8c5df}.tag-list{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}.tag{font-size:.78rem;padding:7px 9px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);color:#dbe7ff}
+    .mega-service{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:stretch}.panel-xl{padding:38px;border-radius:36px;background:linear-gradient(145deg,rgba(25,230,255,.11),rgba(139,92,246,.07));border:1px solid rgba(255,255,255,.14);box-shadow:var(--shadow);position:relative;overflow:hidden}.panel-xl:after{content:"</>";position:absolute;right:20px;bottom:-48px;font-family:"JetBrains Mono";font-size:12rem;font-weight:900;color:rgba(255,255,255,.035)}.panel-xl h3{font-family:"Space Grotesk";font-size:clamp(2rem,4vw,3.4rem);line-height:1;margin-bottom:16px}.checklist{display:grid;gap:12px;margin-top:24px}.check{display:flex;gap:12px;align-items:flex-start;color:#d8e5ff}.check i{margin-top:5px;color:var(--green)}
+    .capability{display:grid;gap:14px}.cap-row{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:center;padding:18px;border-radius:22px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.11)}.cap-row b{font-family:"JetBrains Mono";color:var(--cyan);font-size:.9rem}.bar{height:10px;border-radius:999px;background:rgba(255,255,255,.08);overflow:hidden}.bar span{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--cyan),var(--violet),var(--pink));width:var(--w)}
+    .work-showcase{display:grid;grid-template-columns:1.15fr .85fr;gap:24px}.screen{border-radius:32px;background:#050816;border:1px solid rgba(255,255,255,.14);box-shadow:var(--shadow);overflow:hidden}.screen-head{height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 18px;background:rgba(255,255,255,.055);border-bottom:1px solid rgba(255,255,255,.1)}.screen-body{padding:22px}.kanban{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.col{border-radius:22px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:14px}.col h4{font-family:"JetBrains Mono";font-size:.78rem;color:var(--muted);margin-bottom:12px}.task{padding:13px;border-radius:16px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.09);margin-bottom:10px}.task small{color:var(--dim)}.roadmap{display:grid;gap:14px}.road{display:flex;gap:14px;padding:18px;border-radius:24px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.11)}.road .num{width:42px;height:42px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,var(--cyan),var(--violet));font-weight:900;flex:0 0 auto}.road b{display:block;margin-bottom:3px}.road p{color:var(--muted);font-size:.94rem}
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.price-card{padding:30px;border-radius:32px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12);position:relative;overflow:hidden}.price-card.featured{background:linear-gradient(145deg,rgba(25,230,255,.14),rgba(139,92,246,.12));border-color:rgba(25,230,255,.35);transform:scale(1.03);box-shadow:var(--glow)}.badge{position:absolute;right:22px;top:22px;background:linear-gradient(135deg,var(--pink),var(--violet));padding:7px 10px;border-radius:999px;font-size:.76rem;font-weight:900}.price-card h3{font-family:"Space Grotesk";font-size:1.7rem}.price{font-family:"Space Grotesk";font-size:2.15rem;margin:16px 0}.price span{font-size:.95rem;color:var(--muted);font-family:Inter}.features{display:grid;gap:10px;margin:20px 0}.features li{list-style:none;color:#d8e5ff;display:flex;gap:10px}.features i{color:var(--green);margin-top:5px}
+    .social-hub{display:grid;grid-template-columns:.82fr 1.18fr;gap:24px;align-items:center}.profile{padding:34px;border-radius:36px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.035));border:1px solid rgba(255,255,255,.13);text-align:center}.profile img{width:150px;height:150px;object-fit:cover;border-radius:44px;margin:0 auto 20px;border:2px solid rgba(25,230,255,.55);box-shadow:var(--glow)}.social-links{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}.social-box{padding:22px;border-radius:24px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.1);text-align:center;transition:.25s}.social-box:hover{transform:translateY(-6px);background:rgba(25,230,255,.08)}.social-box i{font-size:2rem;margin-bottom:10px;color:var(--cyan)}
+    .final-cta{padding:95px 0 120px}.cta-panel{position:relative;overflow:hidden;text-align:center;padding:64px 28px;border-radius:42px;background:radial-gradient(circle at 50% 0%,rgba(25,230,255,.22),transparent 36%),linear-gradient(135deg,rgba(255,255,255,.11),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.16);box-shadow:var(--shadow)}.cta-panel h2{font-family:"Space Grotesk";font-size:clamp(2.4rem,5vw,5rem);line-height:.95;letter-spacing:-.05em;margin-bottom:18px}.cta-panel p{max-width:760px;margin:0 auto 28px;color:#c8d6f3;font-size:1.1rem}
+    footer{padding:54px 0 30px;background:rgba(3,5,13,.78);border-top:1px solid rgba(255,255,255,.1)}.footer-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:30px}.footer-grid h4{color:var(--cyan);margin-bottom:14px}.footer-grid p,.footer-grid a{color:var(--muted)}.foot-social{display:flex;gap:10px;margin-top:16px}.foot-social a{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:#fff}.copyright{margin-top:34px;padding-top:22px;border-top:1px solid rgba(255,255,255,.08);color:var(--dim);font-size:.9rem;text-align:center}.float-contact{position:fixed;right:22px;bottom:22px;z-index:1000;display:flex;flex-direction:column;gap:10px}.float-contact a{width:54px;height:54px;border-radius:18px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--cyan),var(--blue),var(--violet));box-shadow:0 16px 45px rgba(25,230,255,.25);transition:.25s}.float-contact a:hover{transform:translateY(-4px) scale(1.04)}
+    .reveal{opacity:0;transform:translateY(34px);transition:opacity .75s ease,transform .75s ease}.reveal.show{opacity:1;transform:none}.split{display:inline-block;overflow:hidden}.split span{display:inline-block;animation:rise .8s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i)*.035s)}@keyframes rise{from{transform:translateY(105%);opacity:0}to{transform:translateY(0);opacity:1}}
+    @media(max-width:1020px){.hero-grid,.mega-service,.work-showcase,.social-hub{grid-template-columns:1fr}.dashboard{min-height:520px}.grid-3,.pricing{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}.nav{display:none}.menu-btn{display:grid}.nav.open{display:flex;position:absolute;left:14px;right:14px;top:76px;flex-direction:column;align-items:stretch;background:rgba(5,8,20,.95);border:1px solid rgba(255,255,255,.12);border-radius:28px;padding:14px;backdrop-filter:blur(20px)}.nav.open a{text-align:center}.nav-cta .ghost{display:none}}
+    @media(max-width:700px){.container,.wide{width:min(100% - 28px,1200px)}header{top:8px}.brand span{display:none}.brand strong{font-size:1.1rem}.nav-shell{padding:9px}.hero{padding-top:124px}.hero-actions{flex-direction:column}.btn{width:100%}.quick-proof{gap:8px}.proof-pill{font-size:.82rem}.dashboard{min-height:610px}.dash-card{transform:none}.floating-chip{position:relative;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;margin:10px 0}.metric-row,.grid-3,.grid-2,.pricing,.kanban,.social-links,.footer-grid{grid-template-columns:1fr}.price-card.featured{transform:none}.cap-row{grid-template-columns:1fr}.section-head{text-align:left}.hero h1,h1{font-size:3.2rem}.screen-body{padding:14px}.float-contact{right:14px;bottom:14px}.float-contact a{width:50px;height:50px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.cursor-glow{display:none}}
+  </style>
 </head>
 <body>
-    <!-- Background -->
-    <div class="bg-gradient"></div>
-    
-    <!-- Header -->
-    <header>
-        <div class="container nav-container">
-            <div class="logo">
-                <img src="https://i.ibb.co/Jj0bxMWW/blob.jpg" alt="Devsier Logo" class="logo-img">
-                <div class="logo-text">DEVS<span style="color: var(--neon-cyan)">IER</span></div>
-            </div>
-            
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-            
-            <nav class="nav-links" id="navLinks">
-                <a href="#services" class="nav-link">Dịch Vụ</a>
-                <a href="#social" class="nav-link">Mạng Xã Hội</a>
-                <a href="#khosubre" class="nav-link">KhoSubRe</a>
-                <a href="#process" class="nav-link">Quy Trình</a>
-                <a href="#ceo" class="nav-link">CEO</a>
-                <a href="#contact" class="nav-link">Liên Hệ</a>
-            </nav>
-        </div>
-    </header>
-    
-    <!-- Hero Section -->
+  <div class="noise"></div><div class="orb one"></div><div class="orb two"></div><div class="orb three"></div><div class="cursor-glow" id="cursorGlow"></div>
+  <header>
+    <div class="nav-shell">
+      <a class="brand" href="#home" aria-label="Devsier home">
+        <img src="https://i.ibb.co/Jj0bxMWW/blob.jpg" alt="Devsier Logo">
+        <div><strong>DEVSIER</strong><span>Software • Social • Security</span></div>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#software">Dev phần mềm</a><a href="#social">Giải pháp MXH</a><a href="#process">Quy trình</a><a href="#packages">Gói dịch vụ</a><a href="#ceo">CEO</a><a href="#contact">Liên hệ</a>
+      </nav>
+      <div class="nav-cta"><a class="btn ghost" href="https://khosubre.vn" target="_blank">KhoSubRe</a><a class="btn primary" href="https://zalo.me/0866977507" target="_blank"><i class="fa-solid fa-bolt"></i> Tư vấn</a><button class="menu-btn" id="menuBtn" aria-label="Mở menu"><i class="fa-solid fa-bars"></i></button></div>
+    </div>
+  </header>
+
+  <main>
     <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="fade-in">GIẢI PHÁP KỸ THUẬT SỐ ĐỈNH CAO CHO DOANH NGHIỆP</h1>
-                <p class="hero-subtitle fade-in">Devsier cung cấp <span class="highlight">dịch vụ kỹ thuật số cao cấp</span> giúp doanh nghiệp tối ưu hiệu quả trên nền tảng mạng xã hội, bảo mật tài khoản và phát triển bền vững trong thời đại số 4.0.</p>
-                <div class="fade-in">
-                    <a href="https://zalo.me/0866977507" class="cta-button">
-                        <i class="fab fa-zalando"></i> KẾT NỐI ZALO: 0866.977.507
-                    </a>
-                </div>
-            </div>
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow reveal"><span class="pulse"></span> DEVSIER DIGITAL SOLUTION STUDIO</div>
+          <h1 class="display split-title">Dev phần mềm & giải pháp MXH cho thương hiệu tăng trưởng</h1>
+          <p class="lead reveal">Chúng tôi nhận phát triển website, app, dashboard quản trị, hệ thống automation, landing page bán hàng và triển khai giải pháp mạng xã hội từ tăng trưởng kênh, bảo mật đến khôi phục tài khoản.</p>
+          <div class="hero-actions reveal">
+            <a class="btn primary" href="https://zalo.me/0866977507" target="_blank"><i class="fa-brands fa-rocketchat"></i> Nhận tư vấn dự án</a>
+            <a class="btn ghost" href="#software"><i class="fa-solid fa-layer-group"></i> Xem năng lực</a>
+          </div>
+          <div class="quick-proof reveal">
+            <div class="proof-pill"><i class="fa-solid fa-check"></i> Website/App theo yêu cầu</div>
+            <div class="proof-pill"><i class="fa-solid fa-check"></i> Social Growth & bảo mật</div>
+            <div class="proof-pill"><i class="fa-solid fa-check"></i> Hỗ trợ triển khai 24/7</div>
+          </div>
         </div>
-    </section>
-    
-    <!-- Stats Section -->
-    <section id="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-card fade-in">
-                    <div class="stat-number">500+</div>
-                    <p>Khách Hàng Hài Lòng</p>
-                </div>
-                <div class="stat-card fade-in">
-                    <div class="stat-number">5+</div>
-                    <p>Năm Kinh Nghiệm</p>
-                </div>
-                <div class="stat-card fade-in">
-                    <div class="stat-number">100%</div>
-                    <p>Cam Kết Chất Lượng</p>
-                </div>
-                <div class="stat-card fade-in">
-                    <div class="stat-number">24/7</div>
-                    <p>Hỗ Trợ Khách Hàng</p>
-                </div>
+        <div class="dashboard reveal" aria-hidden="true">
+          <div class="floating-chip one"><i class="fa-solid fa-code"></i><div><b>Custom Software</b><br><span class="muted">Web • App • CRM</span></div></div>
+          <div class="floating-chip three"><i class="fa-solid fa-shield-halved"></i><div><b>Account Security</b><br><span class="muted">Recover & protect</span></div></div>
+          <div class="dash-card">
+            <div class="dash-top"><div class="dots"><span></span><span></span><span></span></div><div class="mono status">SYSTEM ONLINE</div></div>
+            <div class="dash-body">
+              <div class="metric-row"><div class="metric"><small>Projects Delivered</small><b>500+</b></div><div class="metric"><small>Support Mode</small><b>24/7</b></div></div>
+              <div class="chart">
+                <svg viewBox="0 0 600 160" preserveAspectRatio="none"><defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#19e6ff"/><stop offset=".55" stop-color="#8b5cf6"/><stop offset="1" stop-color="#ec4899"/></linearGradient></defs><path d="M0 120 C80 90 110 110 170 72 C230 32 280 86 340 54 C420 12 470 68 600 28" fill="none" stroke="url(#g)" stroke-width="7" stroke-linecap="round"/><path d="M0 120 C80 90 110 110 170 72 C230 32 280 86 340 54 C420 12 470 68 600 28 L600 160 L0 160Z" fill="url(#g)" opacity=".12"/></svg>
+              </div>
+              <div class="code-window"><span class="pink">const</span> project = {<br>&nbsp;&nbsp;type: <span class="green">"software + social growth"</span>,<br>&nbsp;&nbsp;stack: [<span class="green">"web"</span>, <span class="green">"app"</span>, <span class="green">"automation"</span>],<br>&nbsp;&nbsp;status: <span class="green">"ready_to_scale"</span><br>}</div>
             </div>
+          </div>
+          <div class="floating-chip two"><i class="fa-solid fa-chart-line"></i><div><b>Social Engine</b><br><span class="muted">Growth & strategy</span></div></div>
         </div>
+      </div>
     </section>
-    
-    <!-- Services Section -->
-    <section id="services">
-        <div class="container">
-            <h2 class="section-title fade-in">DỊCH VỤ CỐT LÕI CỦA DEVSIER</h2>
-            <p style="text-align: center; margin-bottom: 50px; color: var(--text-gray); max-width: 800px; margin-left: auto; margin-right: auto;" class="fade-in">
-                Chúng tôi cung cấp giải pháp toàn diện cho mọi nhu cầu về dịch vụ mạng xã hội, từ tăng tương tác đến bảo mật và đào tạo chuyên sâu.
-            </p>
-            
-            <div class="services-grid">
-                <!-- Service 1 -->
-                <div class="service-card fade-in">
-                    <div class="service-number">01</div>
-                    <div class="service-icon"><i class="fas fa-rocket"></i></div>
-                    <h3 style="margin-bottom: 15px;">Tăng Tương Tác MXH</h3>
-                    <p>Tăng like, follow, comment, share tự nhiên cho Facebook, TikTok, YouTube, Instagram. Giải pháp an toàn, hiệu quả với tỷ lệ tương tác thực cao, không bị giảm sau khi dừng dịch vụ.</p>
-                </div>
-                
-                <!-- Service 2 -->
-                <div class="service-card fade-in">
-                    <div class="service-number">02</div>
-                    <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3 style="margin-bottom: 15px;">Phát Triển Kênh Social</h3>
-                    <p>Xây dựng chiến lược phát triển kênh mạng xã hội bài bản, tối ưu hóa nội dung, hình ảnh để tăng trưởng bền vững và thu hút khách hàng tiềm năng.</p>
-                </div>
-                
-                <!-- Service 3 -->
-                <div class="service-card fade-in">
-                    <div class="service-number">03</div>
-                    <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3 style="margin-bottom: 15px;">Hỗ Trợ & Khôi Phục Tài Khoản</h3>
-                    <p>Hỗ trợ khôi phục tài khoản Facebook, TikTok, YouTube bị khóa, bị hack nhanh chóng và hiệu quả với tỷ lệ thành công cao từ đội ngũ chuyên gia giàu kinh nghiệm.</p>
-                </div>
-                
-                <!-- Service 4 -->
-                <div class="service-card fade-in">
-                    <div class="service-number">04</div>
-                    <div class="service-icon"><i class="fas fa-lock"></i></div>
-                    <h3 style="margin-bottom: 15px;">Bảo Mật Tài Khoản</h3>
-                    <p>Tư vấn và triển khai giải pháp bảo mật tài khoản mạng xã hội, phòng chống hack, bảo vệ thông tin và dữ liệu quan trọng của doanh nghiệp với công nghệ tiên tiến.</p>
-                </div>
-                
-                <!-- Service 5 -->
-                <div class="service-card fade-in">
-                    <div class="service-number">05</div>
-                    <div class="service-icon"><i class="fas fa-shopping-cart"></i></div>
-                    <h3 style="margin-bottom: 15px;">Xây Dựng Kênh Bán Hàng</h3>
-                    <p>Thiết lập và tối ưu kênh bán hàng trên Facebook, TikTok Shop, YouTube giúp tăng doanh thu hiệu quả với chiến lược marketing bài bản và công cụ phân tích chuyên sâu.</p>
-                </div>
-                
-                <!-- Service 6 -->
-                <div class="service-card fade-in">
-                    <div class="service-number">06</div>
-                    <div class="service-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <h3 style="margin-bottom: 15px;">Đào Tạo Học Viên</h3>
-                    <p>Đào tạo chuyên sâu về dịch vụ mạng xã hội, chia sẻ kinh nghiệm thực tế và phương pháp triển khai hiệu quả cho cá nhân và doanh nghiệp với giáo trình bài bản.</p>
-                </div>
-            </div>
+
+    <div class="strip"><div class="marquee"><span><i class="fa-solid fa-terminal"></i> Software Development</span><span><i class="fa-solid fa-globe"></i> Website & Landing Page</span><span><i class="fa-solid fa-mobile-screen"></i> App & Mini App</span><span><i class="fa-solid fa-chart-simple"></i> Dashboard / CRM</span><span><i class="fa-solid fa-robot"></i> Automation</span><span><i class="fa-solid fa-users"></i> Social Media Solution</span><span><i class="fa-solid fa-shield"></i> Security & Recovery</span><span><i class="fa-solid fa-terminal"></i> Software Development</span><span><i class="fa-solid fa-globe"></i> Website & Landing Page</span><span><i class="fa-solid fa-mobile-screen"></i> App & Mini App</span></div></div>
+
+    <section id="software">
+      <div class="container">
+        <div class="section-head reveal"><span class="kicker">Core Capability</span><h2>Nâng Devsier thành đội ngũ triển khai sản phẩm số trọn gói</h2><p>Từ ý tưởng đến bản chạy thật: giao diện, backend, quản trị, tích hợp thanh toán/API, tự động hóa vận hành và tối ưu chuyển đổi.</p></div>
+        <div class="mega-service reveal">
+          <div class="panel-xl">
+            <h3>Nhận dev phần mềm theo nhu cầu thực tế của doanh nghiệp</h3>
+            <p class="muted">Không chỉ làm đẹp giao diện. Devsier tập trung vào sản phẩm có khả năng bán hàng, vận hành và mở rộng.</p>
+            <div class="checklist"><div class="check"><i class="fa-solid fa-circle-check"></i><span>Website doanh nghiệp, landing page bán hàng, trang giới thiệu thương hiệu cá nhân.</span></div><div class="check"><i class="fa-solid fa-circle-check"></i><span>Hệ thống quản trị đơn hàng, khách hàng, đại lý, học viên, dịch vụ và báo cáo.</span></div><div class="check"><i class="fa-solid fa-circle-check"></i><span>Dashboard tracking chiến dịch MXH, tự động hóa quy trình, tích hợp API và công cụ nội bộ.</span></div><div class="check"><i class="fa-solid fa-circle-check"></i><span>Thiết kế UI/UX, tối ưu tốc độ, responsive mobile, SEO technical và bảo trì lâu dài.</span></div></div>
+          </div>
+          <div class="capability">
+            <div class="cap-row"><b>UI/UX Design</b><div class="bar"><span style="--w:94%"></span></div></div>
+            <div class="cap-row"><b>Frontend Web</b><div class="bar"><span style="--w:96%"></span></div></div>
+            <div class="cap-row"><b>Backend/API</b><div class="bar"><span style="--w:88%"></span></div></div>
+            <div class="cap-row"><b>Automation</b><div class="bar"><span style="--w:91%"></span></div></div>
+            <div class="cap-row"><b>Social Solution</b><div class="bar"><span style="--w:98%"></span></div></div>
+          </div>
         </div>
+        <div class="grid-3" style="margin-top:24px">
+          <article class="card reveal"><div class="icon"><i class="fa-solid fa-window-maximize"></i></div><h3>Website/Landing Page</h3><p>Giao diện công nghệ, tốc độ cao, CTA rõ ràng, phù hợp bán dịch vụ, xây thương hiệu và chạy quảng cáo.</p><div class="tag-list"><span class="tag">SEO</span><span class="tag">Responsive</span><span class="tag">Conversion</span></div></article>
+          <article class="card reveal"><div class="icon"><i class="fa-solid fa-gears"></i></div><h3>Phần mềm quản trị</h3><p>CRM, quản lý đơn, user, đại lý, học viên, phân quyền, báo cáo, dashboard và quy trình nội bộ.</p><div class="tag-list"><span class="tag">CRM</span><span class="tag">Dashboard</span><span class="tag">Role</span></div></article>
+          <article class="card reveal"><div class="icon"><i class="fa-solid fa-plug-circle-bolt"></i></div><h3>Tích hợp & Automation</h3><p>Kết nối API, biểu mẫu, Zalo, thanh toán, Google Sheet, webhook và các luồng tự động giúp tiết kiệm thời gian.</p><div class="tag-list"><span class="tag">API</span><span class="tag">Webhook</span><span class="tag">Bot</span></div></article>
+        </div>
+      </div>
     </section>
-    
-    <!-- Social Section -->
+
     <section id="social">
-        <div class="container">
-            <h2 class="section-title fade-in">KẾT NỐI VỚI CHÚNG TÔI</h2>
-            <p style="text-align: center; margin-bottom: 50px; color: var(--text-gray); max-width: 800px; margin-left: auto; margin-right: auto;" class="fade-in">
-                Theo dõi Nguyễn Đình Huy trên các nền tảng mạng xã hội để cập nhật kiến thức, chia sẻ và giải pháp kỹ thuật số mới nhất.
-            </p>
-            
-            <div class="social-grid">
-                <!-- Facebook -->
-                <div class="social-card fade-in">
-                    <div class="social-icon"><i class="fab fa-facebook"></i></div>
-                    <h3 style="margin-bottom: 15px;">Facebook</h3>
-                    <p>Theo dõi và kết nối với Nguyễn Đình Huy trên Facebook để cập nhật thông tin mới nhất về dịch vụ và giải pháp kỹ thuật số hàng đầu Việt Nam.</p>
-                    <a href="https://www.facebook.com/heataex/" target="_blank" class="social-link">
-                        <i class="fab fa-facebook"></i> Theo dõi Facebook
-                    </a>
-                </div>
-                
-                <!-- TikTok -->
-                <div class="social-card fade-in">
-                    <div class="social-icon"><i class="fab fa-tiktok"></i></div>
-                    <h3 style="margin-bottom: 15px;">TikTok</h3>
-                    <p>Khám phá nội dung sáng tạo và xu hướng mới nhất trên TikTok Đình Huy Channel - Nơi chia sẻ kiến thức và giải pháp digital marketing đỉnh cao.</p>
-                    <a href="https://www.tiktok.com/@dinhhuychannel.media" target="_blank" class="social-link">
-                        <i class="fab fa-tiktok"></i> Theo dõi TikTok
-                    </a>
-                </div>
-                
-                <!-- YouTube -->
-                <div class="social-card fade-in">
-                    <div class="social-icon"><i class="fab fa-youtube"></i></div>
-                    <h3 style="margin-bottom: 15px;">YouTube</h3>
-                    <p>Học hỏi kiến thức và xem video đào tạo chất lượng trên kênh YouTube Đình Huy Channel - Chuyên gia giải pháp kỹ thuật số với 5+ năm kinh nghiệm.</p>
-                    <a href="https://www.youtube.com/@DinhHuyChannel" target="_blank" class="social-link">
-                        <i class="fab fa-youtube"></i> Theo dõi YouTube
-                    </a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-head reveal"><span class="kicker">Social Media Solution</span><h2>Giải pháp MXH: tăng trưởng kênh, bảo mật, khôi phục và vận hành</h2><p>Devsier hỗ trợ cá nhân, shop, creator và doanh nghiệp xây dựng hiện diện số chắc chắn trên Facebook, TikTok, YouTube, Instagram.</p></div>
+        <div class="grid-3">
+          <article class="card reveal"><div class="icon"><i class="fa-solid fa-rocket"></i></div><h3>Tăng trưởng kênh Social</h3><p>Tư vấn lộ trình phát triển kênh, tối ưu hồ sơ, nội dung, tương tác và định hướng chuyển đổi khách hàng.</p><div class="tag-list"><span class="tag">Facebook</span><span class="tag">TikTok</span><span class="tag">YouTube</span></div></article>
+          <article class="card reveal"><div class="icon"><i class="fa-solid fa-lock"></i></div><h3>Bảo mật tài khoản</h3><p>Thiết lập lớp bảo vệ, kiểm tra rủi ro, hướng dẫn phòng chống hack, bảo vệ fanpage/tài khoản quan trọng.</p><div class="tag-list"><span class="tag">2FA</span><span class="tag">Page Safety</span><span class="tag">Audit</span></div></article>
+          <article class="card reveal"><div class="icon"><i class="fa-solid fa-life-ring"></i></div><h3>Hỗ trợ khôi phục</h3><p>Tiếp nhận tình trạng khóa/hack/mất quyền, phân tích hướng xử lý và hỗ trợ khách hàng theo từng trường hợp cụ thể.</p><div class="tag-list"><span class="tag">Recovery</span><span class="tag">Support</span><span class="tag">Case-by-case</span></div></article>
         </div>
+      </div>
     </section>
-    
-    <!-- KhoSubRe Section -->
-    <section id="khosubre">
-        <div class="container">
-            <h2 class="section-title fade-in">HỆ SINH THÁI KHOSUBRE.VN</h2>
-            <div class="khosubre-section fade-in">
-                <img src="https://i.ibb.co/9kW15Kns/blob.jpg" alt="KhoSubRe.vn Logo" class="khosubre-logo">
-                <h3 style="font-size: 2rem; margin-bottom: 20px; color: var(--neon-purple);">KHOSUBRE.VN - NỀN TẢNG DỊCH VỤ SOCIAL UY TÍN</h3>
-                <p style="margin-bottom: 25px; line-height: 1.8;">
-                    KhoSubRe.vn là hệ sinh thái cung cấp dịch vụ mạng xã hội chất lượng cao với giá cả hợp lý nhất thị trường. 
-                    Chúng tôi cam kết mang đến giải pháp tối ưu cho mọi nhu cầu của khách hàng với đội ngũ chuyên gia giàu kinh nghiệm 
-                    và công nghệ tiên tiến hàng đầu Việt Nam.
-                </p>
-                <a href="https://khosubre.vn" target="_blank" class="cta-button">
-                    <i class="fas fa-external-link-alt"></i> TRUY CẬP KHOSUBRE.VN
-                </a>
-            </div>
+
+    <section id="showcase">
+      <div class="wide">
+        <div class="section-head reveal"><span class="kicker">Execution System</span><h2>Bố cục mới tập trung vào niềm tin, năng lực và chuyển đổi</h2><p>Khách vào website sẽ hiểu ngay Devsier làm gì, vì sao nên chọn, và có nhiều điểm chạm để liên hệ.</p></div>
+        <div class="work-showcase">
+          <div class="screen reveal">
+            <div class="screen-head"><div class="dots"><span></span><span></span><span></span></div><span class="mono muted">devsier.project.board</span></div>
+            <div class="screen-body"><div class="kanban"><div class="col"><h4>DISCOVERY</h4><div class="task"><b>Phân tích nhu cầu</b><br><small>Business goal, user flow</small></div><div class="task"><b>Định nghĩa tính năng</b><br><small>MVP & roadmap</small></div></div><div class="col"><h4>BUILD</h4><div class="task"><b>UI/UX prototype</b><br><small>Modern tech layout</small></div><div class="task"><b>Code hệ thống</b><br><small>Frontend, backend, API</small></div></div><div class="col"><h4>LAUNCH</h4><div class="task"><b>Deploy & tối ưu</b><br><small>Speed, SEO, security</small></div><div class="task"><b>Bảo trì</b><br><small>Support & upgrade</small></div></div></div></div>
+          </div>
+          <div class="roadmap reveal" id="process">
+            <div class="road"><div class="num">1</div><div><b>Tư vấn chiến lược</b><p>Xác định mục tiêu: bán hàng, xây thương hiệu, quản trị nội bộ hoặc tăng trưởng MXH.</p></div></div>
+            <div class="road"><div class="num">2</div><div><b>Thiết kế giải pháp</b><p>Đưa ra kiến trúc, giao diện, tính năng, chi phí và timeline triển khai rõ ràng.</p></div></div>
+            <div class="road"><div class="num">3</div><div><b>Phát triển & kiểm thử</b><p>Code, review, kiểm thử responsive, tốc độ, bảo mật và trải nghiệm người dùng.</p></div></div>
+            <div class="road"><div class="num">4</div><div><b>Bàn giao & đồng hành</b><p>Hướng dẫn sử dụng, hỗ trợ vận hành, bảo trì và nâng cấp theo nhu cầu mới.</p></div></div>
+          </div>
         </div>
+      </div>
     </section>
-    
-    <!-- Process Section -->
-    <section id="process">
-        <div class="container">
-            <h2 class="section-title fade-in">QUY TRÌNH LÀM VIỆC CHUYÊN NGHIỆP</h2>
-            <p style="text-align: center; margin-bottom: 50px; color: var(--text-gray); max-width: 800px; margin-left: auto; margin-right: auto;" class="fade-in">
-                Chúng tôi làm việc với quy trình chuyên nghiệp, đảm bảo chất lượng dịch vụ và sự hài lòng của khách hàng.
-            </p>
-            
-            <div class="process-steps">
-                <!-- Step 1 -->
-                <div class="process-step fade-in">
-                    <div class="step-number">1</div>
-                    <h3 style="margin-bottom: 15px;">Tiếp Nhận Yêu Cầu</h3>
-                    <p>Khách hàng liên hệ qua Zalo, Facebook hoặc điện thoại để trao đổi nhu cầu cụ thể. Chúng tôi lắng nghe và phân tích yêu cầu của khách hàng một cách chi tiết.</p>
-                </div>
-                
-                <!-- Step 2 -->
-                <div class="process-step fade-in">
-                    <div class="step-number">2</div>
-                    <h3 style="margin-bottom: 15px;">Tư Vấn Giải Pháp</h3>
-                    <p>Chuyên gia Devsier phân tích và đề xuất giải pháp tối ưu nhất cho từng trường hợp. Báo giá chi tiết và thời gian thực hiện rõ ràng, minh bạch.</p>
-                </div>
-                
-                <!-- Step 3 -->
-                <div class="process-step fade-in">
-                    <div class="step-number">3</div>
-                    <h3 style="margin-bottom: 15px;">Triển Khai Dịch Vụ</h3>
-                    <p>Đội ngũ kỹ thuật tiến hành triển khai dịch vụ với quy trình chuẩn và bảo mật. Cập nhật tiến độ thường xuyên cho khách hàng qua nhiều kênh.</p>
-                </div>
-                
-                <!-- Step 4 -->
-                <div class="process-step fade-in">
-                    <div class="step-number">4</div>
-                    <h3 style="margin-bottom: 15px;">Hỗ Trợ & Bảo Hành</h3>
-                    <p>Hỗ trợ khách hàng trong suốt quá trình sử dụng và bảo hành dịch vụ dài hạn. Luôn sẵn sàng giải đáp mọi thắc mắc của khách hàng 24/7.</p>
-                </div>
-            </div>
+
+    <section id="packages">
+      <div class="container">
+        <div class="section-head reveal"><span class="kicker">Service Packages</span><h2>Gói triển khai dễ chọn, có thể tùy chỉnh theo dự án</h2><p>Mức giá thực tế phụ thuộc tính năng, quy mô và thời gian. Liên hệ để được tư vấn phương án phù hợp nhất.</p></div>
+        <div class="pricing">
+          <div class="price-card reveal"><h3>Starter Web</h3><p class="muted">Cho cá nhân/shop cần website đẹp để giới thiệu và chạy quảng cáo.</p><div class="price">Landing <span>page</span></div><ul class="features"><li><i class="fa-solid fa-check"></i> Giao diện hiện đại</li><li><i class="fa-solid fa-check"></i> Responsive mobile</li><li><i class="fa-solid fa-check"></i> Form/Zalo CTA</li><li><i class="fa-solid fa-check"></i> SEO cơ bản</li></ul><a class="btn ghost" href="https://zalo.me/0866977507">Tư vấn gói này</a></div>
+          <div class="price-card featured reveal"><span class="badge">Nổi bật</span><h3>Business System</h3><p class="muted">Cho doanh nghiệp cần website + quản trị + automation.</p><div class="price">Custom <span>software</span></div><ul class="features"><li><i class="fa-solid fa-check"></i> Website/app theo yêu cầu</li><li><i class="fa-solid fa-check"></i> Dashboard quản trị</li><li><i class="fa-solid fa-check"></i> API & automation</li><li><i class="fa-solid fa-check"></i> Bảo trì/nâng cấp</li></ul><a class="btn primary" href="https://zalo.me/0866977507">Bắt đầu dự án</a></div>
+          <div class="price-card reveal"><h3>Social Growth</h3><p class="muted">Cho thương hiệu cần giải pháp phát triển kênh và bảo vệ tài khoản.</p><div class="price">MXH <span>solution</span></div><ul class="features"><li><i class="fa-solid fa-check"></i> Tư vấn tăng trưởng kênh</li><li><i class="fa-solid fa-check"></i> Tối ưu hồ sơ/nội dung</li><li><i class="fa-solid fa-check"></i> Bảo mật & khôi phục</li><li><i class="fa-solid fa-check"></i> Kết nối KhoSubRe.vn</li></ul><a class="btn ghost" href="https://zalo.me/0866977507">Nhận tư vấn</a></div>
         </div>
+      </div>
     </section>
-    
-    <!-- CEO Section -->
+
     <section id="ceo">
-        <div class="container">
-            <h2 class="section-title fade-in">CEO & NGƯỜI SÁNG LẬP</h2>
-            <div class="ceo-card fade-in">
-                <img src="https://i.ibb.co/v5JwvVZ/blob.jpg" alt="Nguyễn Đình Huy - CEO Devsier" class="ceo-image">
-                <div class="ceo-info">
-                    <h3 style="font-size: 2rem; margin-bottom: 10px; color: var(--neon-cyan);">NGUYỄN ĐÌNH HUY</h3>
-                    <p style="color: var(--neon-purple); margin-bottom: 20px; font-weight: 600;">CEO & Founder Devsier - Chuyên gia giải pháp kỹ thuật số</p>
-                    <p style="margin-bottom: 15px; line-height: 1.7;">
-                        Với hơn 5 năm kinh nghiệm trong lĩnh vực Digital Marketing và dịch vụ mạng xã hội, 
-                        Nguyễn Đình Huy đã xây dựng Devsier thành một trong những đơn vị cung cấp giải pháp 
-                        kỹ thuật số uy tín hàng đầu Việt Nam với hàng ngàn khách hàng hài lòng.
-                    </p>
-                    <p style="margin-bottom: 15px; line-height: 1.7;">
-                        Anh đã đào tạo và tư vấn cho hàng trăm doanh nghiệp và cá nhân về chiến lược phát triển 
-                        trên nền tảng mạng xã hội, giúp họ đạt được mục tiêu kinh doanh và phát triển thương hiệu 
-                        một cách bền vững.
-                    </p>
-                    <p style="font-style: italic; color: var(--neon-cyan); margin-top: 20px; border-left: 3px solid var(--neon-purple); padding-left: 15px;">
-                        "Chất lượng dịch vụ là danh dự, sự hài lòng của khách hàng là thành công lớn nhất của chúng tôi."
-                    </p>
-                </div>
-            </div>
+      <div class="container social-hub">
+        <div class="profile reveal"><img src="https://i.ibb.co/v5JwvVZ/blob.jpg" alt="Nguyễn Đình Huy - CEO Devsier"><h2 class="display">Nguyễn Đình Huy</h2><p class="grad" style="font-weight:900">CEO & Founder Devsier</p><p class="muted" style="margin-top:12px">Định hướng Devsier trở thành đơn vị triển khai sản phẩm số, giải pháp mạng xã hội và hệ sinh thái dịch vụ công nghệ cho cá nhân/doanh nghiệp.</p><div class="social-links"><a class="social-box" href="https://www.facebook.com/heataex/" target="_blank"><i class="fa-brands fa-facebook"></i><br>Facebook</a><a class="social-box" href="https://www.tiktok.com/@dinhhuychannel.media" target="_blank"><i class="fa-brands fa-tiktok"></i><br>TikTok</a><a class="social-box" href="https://www.youtube.com/@DinhHuyChannel" target="_blank"><i class="fa-brands fa-youtube"></i><br>YouTube</a></div></div>
+        <div class="grid-2">
+          <article class="card reveal"><div class="icon"><i class="fa-solid fa-building"></i></div><h3>Cho doanh nghiệp</h3><p>Website, hệ thống quản trị, automation, landing page, dashboard và nền tảng hỗ trợ bán hàng.</p></article>
+          <article class="card reveal"><div class="icon"><i class="fa-solid fa-store"></i></div><h3>Cho shop/creator</h3><p>Giải pháp phát triển MXH, tối ưu kênh, bảo mật tài khoản và kênh bán hàng online.</p></article>
+          <article class="card reveal"><div class="icon"><i class="fa-solid fa-graduation-cap"></i></div><h3>Đào tạo & chuyển giao</h3><p>Hướng dẫn vận hành, chuyển giao hệ thống, đào tạo sử dụng và tư vấn chiến lược.</p></article>
+          <article class="card reveal"><div class="icon"><i class="fa-solid fa-handshake-angle"></i></div><h3>Đồng hành lâu dài</h3><p>Không chỉ bàn giao rồi dừng. Devsier hỗ trợ bảo trì, nâng cấp và tối ưu theo từng giai đoạn.</p></article>
         </div>
+      </div>
     </section>
-    
-    <!-- Testimonials -->
-    <section id="testimonials">
-        <div class="container">
-            <h2 class="section-title fade-in">KHÁCH HÀNG NÓI VỀ DEVSIER</h2>
-            <p style="text-align: center; margin-bottom: 50px; color: var(--text-gray); max-width: 800px; margin-left: auto; margin-right: auto;" class="fade-in">
-                Những phản hồi tích cực từ khách hàng đã sử dụng dịch vụ của chúng tôi.
-            </p>
-            
-            <div class="testimonial-grid">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card fade-in">
-                    <p class="testimonial-text">
-                        "Dịch vụ tăng tương tác của Devsier rất hiệu quả, fanpage của tôi đã tăng từ 1k lên 10k follow chỉ sau 1 tháng. 
-                        Tỷ lệ tương tác tự nhiên cao, không bị giảm sau khi dừng dịch vụ. Đội ngũ hỗ trợ rất nhiệt tình và chuyên nghiệp."
-                    </p>
-                    <p style="font-weight: 600; color: var(--neon-cyan);">Chị Lan - Chủ shop thời trang</p>
-                </div>
-                
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card fade-in">
-                    <p class="testimonial-text">
-                        "Tài khoản Facebook của tôi bị hack, may nhờ có đội ngũ Devsier hỗ trợ khôi phục chỉ trong 24h. 
-                        Chuyên nghiệp và nhanh chóng! Tôi đã giới thiệu nhiều người bạn sử dụng dịch vụ của Devsier."
-                    </p>
-                    <p style="font-weight: 600; color: var(--neon-cyan);">Anh Minh - Doanh nhân</p>
-                </div>
-                
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card fade-in">
-                    <p class="testimonial-text">
-                        "Khóa đào tạo dịch vụ mạng xã hội của anh Huy rất thực tế, giúp tôi tự triển khai được dịch vụ cho khách hàng. 
-                        Kiến thức sâu rộng, cách truyền đạt dễ hiểu, có nhiều case study thực tế."
-                    </p>
-                    <p style="font-weight: 600; color: var(--neon-cyan);">Bạn Trung - Chuyên gia Digital Marketing</p>
-                </div>
-            </div>
-        </div>
+
+    <section class="final-cta" id="contact">
+      <div class="container">
+        <div class="cta-panel reveal"><span class="kicker">Ready to build?</span><h2>Biến ý tưởng thành hệ thống chạy thật</h2><p>Cần một website ấn tượng, phần mềm quản trị riêng, automation tiết kiệm thời gian hoặc giải pháp mạng xã hội để tăng trưởng? Liên hệ Devsier để được tư vấn hướng triển khai phù hợp.</p><div class="hero-actions" style="justify-content:center;margin-bottom:0"><a class="btn primary" href="https://zalo.me/0866977507" target="_blank"><i class="fa-solid fa-phone"></i> Zalo: 0866.977.507</a><a class="btn ghost" href="https://khosubre.vn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Truy cập KhoSubRe.vn</a></div></div>
+      </div>
     </section>
-    
-    <!-- FAQ Section -->
-    <section id="faq">
-        <div class="container">
-            <h2 class="section-title fade-in">CÂU HỎI THƯỜNG GẶP</h2>
-            
-            <div class="faq-grid">
-                <!-- FAQ 1 -->
-                <div class="faq-item fade-in">
-                    <div class="faq-question">
-                        <span>Dịch vụ tăng tương tác có an toàn không?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Hoàn toàn an toàn. Chúng tôi sử dụng phương pháp tăng tương tác tự nhiên, không vi phạm chính sách của các nền tảng mạng xã hội. Tỷ lệ tương tác ổn định và không bị giảm sau khi dừng dịch vụ.</p>
-                    </div>
-                </div>
-                
-                <!-- FAQ 2 -->
-                <div class="faq-item fade-in">
-                    <div class="faq-question">
-                        <span>Thời gian khôi phục tài khoản bị hack là bao lâu?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Thời gian khôi phục phụ thuộc vào mức độ phức tạp của từng trường hợp. Thông thường từ 24-72 giờ với tỷ lệ thành công trên 90%.</p>
-                    </div>
-                </div>
-                
-                <!-- FAQ 3 -->
-                <div class="faq-item fade-in">
-                    <div class="faq-question">
-                        <span>Có được hỗ trợ sau khi sử dụng dịch vụ không?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Có. Chúng tôi hỗ trợ khách hàng 24/7 trong suốt quá trình sử dụng dịch vụ và có chính sách bảo hành dài hạn cho tất cả các dịch vụ.</p>
-                    </div>
-                </div>
-                
-                <!-- FAQ 4 -->
-                <div class="faq-item fade-in">
-                    <div class="faq-question">
-                        <span>Thanh toán như thế nào?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Chúng tôi hỗ trợ nhiều hình thức thanh toán: Chuyển khoản ngân hàng, Momo, ZaloPay. Thanh toán linh hoạt theo từng gói dịch vụ.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Final CTA -->
-    <section id="contact">
-        <div class="container">
-            <div class="khosubre-section" style="max-width: 900px;">
-                <h2 class="section-title fade-in" style="margin-bottom: 30px;">SẴN SÀNG ĐƯA DOANH NGHIỆP LÊN TẦM CAO MỚI?</h2>
-                <p style="margin-bottom: 40px; line-height: 1.8; font-size: 1.1rem;" class="fade-in">
-                    Liên hệ ngay với Devsier để được tư vấn giải pháp tối ưu nhất cho doanh nghiệp của bạn. 
-                    Chúng tôi cam kết mang lại giá trị vượt trội với đội ngũ chuyên gia giàu kinh nghiệm và 
-                    công nghệ tiên tiến hàng đầu Việt Nam. Hãy cùng chúng tôi xây dựng thành công trong thời đại số!
-                </p>
-                <a href="https://zalo.me/0866977507" class="cta-button fade-in" style="font-size: 1.2rem; padding: 18px 45px;">
-                    <i class="fas fa-phone-alt"></i> ZALO NGAY: 0866.977.507
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div>
-                    <div class="logo" style="margin-bottom: 20px;">
-                        <img src="https://i.ibb.co/Jj0bxMWW/blob.jpg" alt="Devsier Logo" class="logo-img" style="width: 60px; height: 60px;">
-                        <div class="logo-text" style="font-size: 1.5rem;">DEVS<span style="color: var(--neon-cyan)">IER</span></div>
-                    </div>
-                    <p style="margin-bottom: 10px;">Công Ty Dịch Vụ Và Giải Pháp Devsier</p>
-                    <p style="color: var(--text-gray); font-size: 0.9rem;">Giải pháp kỹ thuật số đỉnh cao cho doanh nghiệp thời đại 4.0</p>
-                </div>
-                
-                <div>
-                    <h4 style="color: var(--neon-cyan); margin-bottom: 20px; font-size: 1.1rem;">Thông Tin Liên Hệ</h4>
-                    <p style="margin-bottom: 10px;"><i class="fas fa-phone" style="margin-right: 10px; color: var(--neon-cyan);"></i> Zalo: <strong>0866.977.507</strong></p>
-                    <p style="margin-bottom: 10px;"><i class="fas fa-envelope" style="margin-right: 10px; color: var(--neon-cyan);"></i> devsier@service.com</p>
-                    <p><i class="fas fa-globe" style="margin-right: 10px; color: var(--neon-cyan);"></i> Hệ sinh thái: <a href="https://khosubre.vn" target="_blank" style="color: var(--neon-purple); text-decoration: none;">KhoSubRe.vn</a></p>
-                </div>
-                
-                <div>
-                    <h4 style="color: var(--neon-cyan); margin-bottom: 20px; font-size: 1.1rem;">Kết Nối Với Chúng Tôi</h4>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/heataex/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.tiktok.com/@dinhhuychannel.media" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://www.youtube.com/@DinhHuyChannel" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a href="https://zalo.me/0866977507" target="_blank" title="Zalo"><i class="fab fa-zalando"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="copyright">
-                <p>&copy; 2023 Devsier - Dịch Vụ & Giải Pháp Kỹ Thuật Số. All rights reserved.</p>
-                <p style="margin-top: 10px;">Thiết kế bởi Devsier với ❤️ | CEO: Nguyễn Đình Huy</p>
-            </div>
-        </div>
-    </footer>
-    
-    <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navLinks = document.getElementById('navLinks');
-        
-        if (mobileMenuBtn && navLinks) {
-            mobileMenuBtn.addEventListener('click', function() {
-                navLinks.classList.toggle('active');
-                const icon = this.querySelector('i');
-                icon.classList.toggle('fa-bars');
-                icon.classList.toggle('fa-times');
-            });
-            
-            // Close menu when clicking outside
-            document.addEventListener('click', function(event) {
-                if (!navLinks.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
-                    navLinks.classList.remove('active');
-                    mobileMenuBtn.querySelector('i').classList.remove('fa-times');
-                    mobileMenuBtn.querySelector('i').classList.add('fa-bars');
-                }
-            });
-            
-            // Close menu when clicking a link
-            navLinks.querySelectorAll('.nav-link').forEach(link => {
-                link.addEventListener('click', function() {
-                    navLinks.classList.remove('active');
-                    mobileMenuBtn.querySelector('i').classList.remove('fa-times');
-                    mobileMenuBtn.querySelector('i').classList.add('fa-bars');
-                });
-            });
-        }
-        
-        // FAQ Toggle
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', function() {
-                const item = this.parentElement;
-                item.classList.toggle('active');
-                
-                const icon = this.querySelector('i');
-                icon.classList.toggle('fa-chevron-down');
-                icon.classList.toggle('fa-chevron-up');
-            });
-        });
-        
-        // Smooth Scroll for Navigation Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // Fade-in animation on scroll
-        const fadeElements = document.querySelectorAll('.fade-in');
-        
-        const fadeInOnScroll = function() {
-            fadeElements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
-                
-                if (elementTop < window.innerHeight - elementVisible) {
-                    element.classList.add('active');
-                }
-            });
-        };
-        
-        // Initial check
-        fadeInOnScroll();
-        
-        // Check on scroll
-        window.addEventListener('scroll', fadeInOnScroll);
-        
-        // Header scroll effect
-        const header = document.querySelector('header');
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 100) {
-                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
-                header.style.background = 'rgba(5, 5, 16, 0.98)';
-            } else {
-                header.style.boxShadow = 'none';
-                header.style.background = 'rgba(5, 5, 16, 0.95)';
-            }
-        });
-        
-        // Handle image errors
-        document.querySelectorAll('img').forEach(img => {
-            img.addEventListener('error', function() {
-                this.style.display = 'none';
-            });
-        });
-        
-        // Page load animation
-        window.addEventListener('load', function() {
-            document.body.classList.add('loaded');
-            
-            // Add active class to initial fade-in elements
-            document.querySelectorAll('.fade-in').forEach((element, index) => {
-                if (index < 3) { // First 3 elements
-                    element.classList.add('active');
-                }
-            });
-        });
-    </script>
+  </main>
+
+  <footer>
+    <div class="container footer-grid"><div><a class="brand" href="#home"><img src="https://i.ibb.co/Jj0bxMWW/blob.jpg" alt="Devsier Logo"><div><strong>DEVSIER</strong><span>Software • Social • Security</span></div></a><p style="margin-top:16px">Công Ty Dịch Vụ Và Giải Pháp Devsier – nhận dev phần mềm, website/app, hệ thống quản trị và cung cấp giải pháp mạng xã hội.</p><div class="foot-social"><a href="https://www.facebook.com/heataex/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a><a href="https://www.tiktok.com/@dinhhuychannel.media" target="_blank"><i class="fa-brands fa-tiktok"></i></a><a href="https://www.youtube.com/@DinhHuyChannel" target="_blank"><i class="fa-brands fa-youtube"></i></a><a href="https://zalo.me/0866977507" target="_blank"><i class="fa-solid fa-comment-dots"></i></a></div></div><div><h4>Dịch vụ</h4><p>Dev phần mềm</p><p>Website/App/Dashboard</p><p>Automation/API</p><p>Giải pháp MXH</p><p>Bảo mật & khôi phục</p></div><div><h4>Liên hệ</h4><p><i class="fa-solid fa-phone"></i> Zalo: 0866.977.507</p><p><i class="fa-solid fa-envelope"></i> devsier@service.com</p><p><i class="fa-solid fa-globe"></i> khosubre.vn</p></div></div>
+    <div class="container copyright">© 2026 Devsier. Built for software, social growth and digital transformation.</div>
+  </footer>
+
+  <div class="float-contact"><a href="https://zalo.me/0866977507" target="_blank" title="Chat Zalo"><i class="fa-solid fa-comment-dots"></i></a><a href="#home" title="Lên đầu trang"><i class="fa-solid fa-arrow-up"></i></a></div>
+
+  <script>
+    const menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('nav');
+    menuBtn?.addEventListener('click',()=>{nav.classList.toggle('open');menuBtn.querySelector('i').classList.toggle('fa-xmark');menuBtn.querySelector('i').classList.toggle('fa-bars')});
+    nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+    const glow=document.getElementById('cursorGlow');
+    window.addEventListener('pointermove',e=>{if(glow){glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px'}});
+    const io=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show');io.unobserve(entry.target)}})},{threshold:.14});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    document.querySelectorAll('.card').forEach(card=>{card.addEventListener('pointermove',e=>{const r=card.getBoundingClientRect();card.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');card.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%')})});
+    document.querySelectorAll('.split-title').forEach(el=>{const text=el.textContent.trim();el.innerHTML=text.split(' ').map((w,i)=>`<span class="split"><span style="--i:${i}">${w}&nbsp;</span></span>`).join('')});
+    window.addEventListener('scroll',()=>{document.querySelector('.nav-shell').style.boxShadow=window.scrollY>40?'0 24px 80px rgba(0,0,0,.48)':'0 20px 70px rgba(0,0,0,.35)'});
+  </script>
 </body>
 </html>
